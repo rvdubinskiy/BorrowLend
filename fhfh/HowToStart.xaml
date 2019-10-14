@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.MyProfile"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Title="Вопросы"
+             ios:Page.LargeTitleDisplay="Never"
+             ios:Page.UseSafeArea="true">
+    <Grid>
+         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Frame HasShadow="false"
+                           BorderColor="#e9e9e9">
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="FillAndExpand"
+                                     HorizontalOptions="FillAndExpand">
+                            <Label Text="Нужно ли вводить паспортные данные?"
+                                   TextColor="Black"
+                                   Font="12"
+                                   FontAttributes="Bold"
+                                   Margin="2"/>
+                            <Button Image="ar.png"
+                                    HorizontalOptions="EndAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                    HeightRequest="20"
+                                    WidthRequest="20"/>
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

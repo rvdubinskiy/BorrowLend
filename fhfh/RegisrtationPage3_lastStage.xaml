@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fhfh.RegisrtationPage3_lastStage"
+             xmlns:local="clr-namespace:fhfh"
+             Title="Регистрация">
+    <ContentPage.Content>
+        <StackLayout x:Name="Page">
+           <!-- <ActivityIndicator x:Name="activity"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               HeightRequest="40"
+                               WidthRequest="40"
+                               IsVisible="true"
+                               IsEnabled="true"/>-->
+        <ScrollView VerticalScrollBarVisibility="Never"
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Vertical">
+                <StackLayout VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand">
+            <Grid RowSpacing="-1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="400"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1">
+                        <Grid RowSpacing="-1"
+                              Padding="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="2">
+                                <StackLayout Orientation="Vertical">
+                                    <Grid ColumnSpacing="-1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50"/>
+                                            <ColumnDefinition Width="7"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <Label Text="Имя"
+                                                   Font="15"/>
+                                        </Grid>
+                                        <Grid Grid.Column="1">
+                                            <Image Source="snowflake.png"
+                                                   HeightRequest="7"
+                                                   WidthRequest="7"
+                                                   VerticalOptions="StartAndExpand"
+                                                   HorizontalOptions="StartAndExpand"/>
+                                        </Grid>
+                                    </Grid>
+                                    <local:MyEntry  x:Name="name"
+                                                    Placeholder="Введите имя"/>
+                                        <BoxView HeightRequest="1"
+                                                 WidthRequest="1"
+                                                 BackgroundColor="#e9e9e9"/>
+                                </StackLayout>
+                            </Grid>
+                            <Grid Grid.Row="0">
+                                <StackLayout Orientation="Vertical">
+                                    <Grid ColumnSpacing="-1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="67"/>
+                                            <ColumnDefinition Width="7"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <Label Text="Фамилия"
+                                                   Font="15"/>
+                                        </Grid>
+                                        <Grid Grid.Column="1">
+                                            <Image Source="snowflake.png"
+                                                   HeightRequest="7"
+                                                   WidthRequest="7"
+                                                   VerticalOptions="StartAndExpand"
+                                                   HorizontalOptions="StartAndExpand"/>
+                                        </Grid>
+                                    </Grid>
+                                    <local:MyEntry x:Name="surname"
+                                                   Placeholder="Введите фамилию"/>
+                                        <BoxView HeightRequest="1"
+                                                 WidthRequest="1"
+                                                 BackgroundColor="#e9e9e9"/>
+                                </StackLayout>
+                            </Grid>
+                            <Grid Grid.Row="4">
+                                <StackLayout Orientation="Vertical">
+                                     <Grid ColumnSpacing="-1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="69"/>
+                                            <ColumnDefinition Width="7"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <Label Text="Отчество"
+                                                   Font="15"/>
+                                        </Grid>
+                                        <Grid Grid.Column="1">
+                                            <Image Source="snowflake.png"
+                                                   HeightRequest="7"
+                                                   WidthRequest="7"
+                                                   VerticalOptions="StartAndExpand"
+                                                   HorizontalOptions="StartAndExpand"/>
+                                        </Grid>
+                                    </Grid>
+                                    <StackLayout>
+                                        <local:MyEntry x:Name="patronymic"
+                                            Placeholder="Введите отчество"/>
+                                        <BoxView HeightRequest="1"
+                                                 WidthRequest="1"
+                                                 BackgroundColor="#e9e9e9"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>   
+                            <Grid Grid.Row="6">
+                                <StackLayout Orientation="Vertical">
+                                     <Grid ColumnSpacing="-1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="114"/>
+                                            <ColumnDefinition Width="7"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <Label Text="Дата рождения"
+                                                   Font="15"/>
+                                        </Grid>
+                                        <Grid Grid.Column="1">
+                                            <Image Source="snowflake.png"
+                                                   HeightRequest="7"
+                                                   WidthRequest="7"
+                                                   VerticalOptions="StartAndExpand"
+                                                   HorizontalOptions="StartAndExpand"/>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid ColumnSpacing="-1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <StackLayout>
+                                                <local:MyPicker x:Name="picker"
+                                                               Title="День"
+                                                               TextColor="Black"
+                                                               VerticalOptions="CenterAndExpand"
+                                                               HorizontalOptions="FillAndExpand">
+                                                        
+                                                    </local:MyPicker>
+                                                <BoxView HeightRequest="1"
+                                                        WidthRequest="1"
+                                                        BackgroundColor="#e9e9e9"/>
+                                             </StackLayout>
+                                        </Grid>
+                                        <Grid Grid.Column="1">
+                                            <StackLayout>
+                                                <local:MyPicker x:Name="month"
+                                                                Title="Месяц"
+                                                                TextColor="Black"
+                                                                VerticalOptions="CenterAndExpand"
+                                                                HorizontalOptions="FillAndExpand"/>
+                                                <BoxView HeightRequest="1"
+                                                        WidthRequest="1"
+                                                        BackgroundColor="#e9e9e9"/>
+                                             </StackLayout>
+                                        </Grid>
+                                        <Grid Grid.Column="2">
+                                            <StackLayout>
+                                                <local:MyPicker x:Name="year"
+                                                                Title="Год"
+                                                                TextColor="Black"
+                                                               VerticalOptions="CenterAndExpand"
+                                                               HorizontalOptions="FillAndExpand"/>
+                                                <BoxView HeightRequest="1"
+                                                        WidthRequest="1"
+                                                        BackgroundColor="#e9e9e9"/>
+                                             </StackLayout>
+                                        </Grid>
+                                    </Grid>
+                                </StackLayout>
+                            </Grid>
+                            <Grid Grid.Row="8">
+                                <StackLayout>
+                                     <Grid ColumnSpacing="-1">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="35"/>
+                                            <ColumnDefinition Width="7"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <Label Text="Пол"
+                                                   Font="15"/>
+                                        </Grid>
+                                        <Grid Grid.Column="1">
+                                            <Image Source="snowflake.png"
+                                                   HeightRequest="7"
+                                                   WidthRequest="7"
+                                                   VerticalOptions="StartAndExpand"
+                                                   HorizontalOptions="StartAndExpand"/>
+                                        </Grid>
+                                    </Grid>
+                                    <StackLayout>
+                                        <local:MyPicker x:Name="gender">
+                                            <Picker.Items>
+                                                <x:String>
+                                                    Мужской
+                                                </x:String>
+                                                <x:String>
+                                                    Женский
+                                                </x:String>
+                                            </Picker.Items>
+                                        </local:MyPicker>
+                                        <BoxView HeightRequest="1"
+                                                 WidthRequest="1"
+                                                 BackgroundColor="#e9e9e9"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                        
+                        
+                      <Grid Grid.Row="2"
+                           >
+                            <Grid Padding="15">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid Grid.Row="0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="100"/>
+                                        </Grid.RowDefinitions>
+                                        
+                                        <Grid Grid.Row="0">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="65"/>
+                                                    <ColumnDefinition Width="7"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                
+                                                <Grid Grid.Column="0">
+                                                    <Label Text="Паспорт"
+                                                           Font="15"/>
+                                                 </Grid>
+                                                
+                                                 <Grid Grid.Column="1">
+                                                     <Image Source="snowflake.png"
+                                                            HeightRequest="7"
+                                                            WidthRequest="7"
+                                                            VerticalOptions="StartAndExpand"
+                                                            HorizontalOptions="StartAndExpand"/>
+                                                 </Grid>
+                                            </Grid>
+                                        </Grid>
+                                        
+                                        
+                                        <Grid Grid.Row="1">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="20"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                
+                                                <Grid Grid.Column="0">
+                                                    <local:MyImage x:Name="passportImage"
+                                                                   HorizontalOptions="CenterAndExpand"
+                                                                   VerticalOptions="CenterAndExpand"
+                                                                   HeightRequest="120"
+                                                                   Source="camera"
+                                                                   WidthRequest="120"
+                                                                   Aspect="AspectFill">
+                                                                <!--<local:MyImage.GestureRecognizers>
+                                                                    <TapGestureRecognizer
+                                                                        Tapped="DownloadPassport"/>
+                                                                </local:MyImage.GestureRecognizers>-->
+                                                    </local:MyImage>
+                                                </Grid>
+                                                
+                                                
+                                                <Grid Grid.Column="2">
+                                                    <Grid>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                        </Grid.RowDefinitions>
+                                                        <StackLayout>
+                                                             <Grid Grid.Row="0">
+                                                                <Button CornerRadius="20"
+                                                                        Text="Загрузить новое"
+                                                                        TextColor="White"
+                                                                        BackgroundColor="#ef5e7a"
+                                                                        VerticalOptions="CenterAndExpand"
+                                                                        HorizontalOptions="FillAndExpand"
+                                                                        Clicked="DownloadPassport"/>
+                                                             </Grid>
+                                                        
+                                                             <Grid Grid.Row="1">
+                                                                <Button CornerRadius="20"
+                                                                        Text="Удалить текущее"
+                                                                        TextColor="Black"
+                                                                        BorderColor="Black"
+                                                                        BorderWidth="1"
+                                                                        VerticalOptions="CenterAndExpand"
+                                                                        HorizontalOptions="FillAndExpand"
+                                                                        Clicked="DeletePassport"/>
+                                                             </Grid>
+                                                        </StackLayout>
+                                                    </Grid>
+                                                    
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                        
+                                    </Grid>
+                                </Grid>
+                                
+                                
+                                <Grid Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="100"/>
+                                        </Grid.RowDefinitions>
+                                        
+                                        <Grid Grid.Row="0">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="134"/>
+                                                    <ColumnDefinition Width="7"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                
+                                                <Grid Grid.Column="0">
+                                                    <Label Text="Водительские права"
+                                                           Font="15"/>
+                                                 </Grid>
+                                                
+                                                 <Grid Grid.Column="1">
+                                                     <Image Source="snowflake.png"
+                                                            HeightRequest="7"
+                                                            WidthRequest="7"
+                                                            VerticalOptions="StartAndExpand"
+                                                            HorizontalOptions="StartAndExpand"/>
+                                                 </Grid>
+                                            </Grid>
+                                        </Grid>
+                                        
+                                        
+                                        <Grid Grid.Row="1">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="20"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                
+                                                <Grid Grid.Column="0">
+                                                    <local:MyImage x:Name="rootsImage"
+                                                                   Source="camera"
+                                                                   HorizontalOptions="CenterAndExpand"
+                                                                   VerticalOptions="CenterAndExpand"
+                                                                   HeightRequest="120"
+                                                                   WidthRequest="120"
+                                                                   Aspect="AspectFill">
+                                                                <!--<local:MyImage.GestureRecognizers>
+                                                                    <TapGestureRecognizer
+                                                                        Tapped="DownloadPassport"/>
+                                                                </local:MyImage.GestureRecognizers>-->
+                                                    </local:MyImage>
+                                                </Grid>
+                                                
+                                                
+                                                <Grid Grid.Column="2">
+                                                    <Grid>
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto"/>
+                                                            <RowDefinition Height="Auto"/>
+                                                        </Grid.RowDefinitions>
+                                                        <StackLayout>
+                                                             <Grid Grid.Row="0">
+                                                                <Button CornerRadius="20"
+                                                                        Text="Загрузить новое"
+                                                                        TextColor="White"
+                                                                        BackgroundColor="#ef5e7a"
+                                                                        VerticalOptions="CenterAndExpand"
+                                                                        HorizontalOptions="FillAndExpand"
+                                                                        Clicked="DownloadRoots"/>
+                                                             </Grid>
+                                                        
+                                                             <Grid Grid.Row="1">
+                                                                <Button CornerRadius="20"
+                                                                        Text="Удалить текущее"
+                                                                        TextColor="Black"
+                                                                        BorderColor="Black"
+                                                                        BorderWidth="1"
+                                                                        VerticalOptions="CenterAndExpand"
+                                                                        HorizontalOptions="FillAndExpand"
+                                                                        Clicked="DeleteRoots"/>
+                                                             </Grid>
+                                                        </StackLayout>
+                                                    </Grid>
+                                                    
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                        
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                      </Grid>  
+                        
+                        <Grid Grid.Row="3">
+                            <Button x:Name="goBtn" 
+                                    Text="Далее"
+                                    TextColor="White" 
+                                    FontAttributes="None" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    FontFamily="Proxima Nova" 
+                                    BackgroundColor="#ef5e7a" 
+                                    WidthRequest="200" 
+                                    HeightRequest="40" 
+                                    FontSize="15"
+                                    Clicked="OnButtonClicked_GoToStartPage"
+                                    CornerRadius="20" 
+                                    VerticalOptions="Center"
+                                    />
+                        </Grid>
+                        
+                  </Grid>      
+                </StackLayout>
+                    <!--<StackLayout x:Name="opacityStack"
+                         IsVisible="false"
+                         IsEnabled="false"
+                         AbsoluteLayout.LayoutFlags="All" 
+                         AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Silver"
+                         Opacity="0.3"/>
+                        <ActivityIndicator x:Name="activityIndicator"
+                               AbsoluteLayout.LayoutFlags="All" 
+                               AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.1, 0.05"
+                               HeightRequest="70"
+                               WidthRequest="70"
+                               IsRunning="false"
+                               IsEnabled="false"
+                               Color="Black"/>-->
+            </ScrollView>
+            </StackLayout>
+        <!--</AbsoluteLayout>-->
+    </ContentPage.Content>
+</ContentPage>

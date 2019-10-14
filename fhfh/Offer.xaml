@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.Offer"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Title="Пользовательское соглашение"
+             ios:Page.LargeTitleDisplay="Never"
+             ios:Page.UseSafeArea="true"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="0"/>
+                <!--<RowDefinition Height="40"/>
+                <RowDefinition Height="10"/>-->
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0"
+                  Padding="20">
+                <ScrollView VerticalScrollBarVisibility="Never"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                    <StackLayout VerticalOptions="FillAndExpand"
+                                 HorizontalOptions="FillAndExpand">
+                        <Label Text="1. услуги интимного характера, а также эротические материалы и товары для взрослых, в т.ч. секс-игрушки и презервативы, нижнее белье с вырезами или прозрачное (просвечивающее);
+                        2. все виды оружия (охотничье, пневматическое, страйкбольное, гражданское и т.д.), в том числе холодное (за исключением кухонных, перочинных, канцелярских ножей), а также комплектующие изделия к нему, копии коллекционного оружия, сувенирное и декоративное оружие, а также изделия конструктивно схожие с оружием;
+                                                        3. вооружение, боеприпасы, военная техника, комплектующие изделия и запасные части, все виды ракетного топлива, взрывчатые вещества и отходы, средства взрывания, порох, пиротехника, лазеры, боевые отравляющие вещества, специальное снаряжение личного состава военизированных организаций и материалы, специальное оборудование, нормативно-техническая документация на их производство и эксплуатацию, форменная одежда государственных служащих, в том числе со знаками отличия;
+                        4. спирт, алкогольные напитки, а также устройства для их изготовления;
+                        5. табак, табачные изделия, табачная продукция, электронные сигареты, кальяны, включая комплектующие и расходные материалы, курительные принадлежности (за исключением зажигалок и пепельниц);
+                        6. лекарственные и фармакологические средства, в том числе используемые в ветеринарии;
+                        7. услуги медицинского характера, в том числе консультации диетологов, услуги ветеринаров, инъекции ботокс-препаратами, лечебный или детский массаж и косметологические услуги;
+                        8. человеческие органы и ткани, донорские услуги, а также услуги суррогатных матерей;
+                        9. монеты"/>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <!--<Grid Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1">
+                        <Button BackgroundColor="#C0C0C0"
+                                Padding="10"
+                                Text="Не согласен"
+                                 TextColor="White"
+                                VerticalOptions="Center"
+                                CornerRadius="20"/>
+                    </Grid>
+                    <Grid Grid.Column="3">
+                         <Button BackgroundColor="#ef5e7a"
+                                 Padding="10"
+                                 Text="Согласен"
+                                 VerticalOptions="Center"
+                                 TextColor="White"
+                                 CornerRadius="20"
+                                 Clicked="OnButtonClicked_Back"/>
+                    </Grid>
+                </Grid>
+            </Grid>-->
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

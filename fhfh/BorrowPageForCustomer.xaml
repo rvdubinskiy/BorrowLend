@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.BorrowPageForCustomer"
+             Title="Заявка на товар"
+             xmlns:parallax="clr-namespace:DevsDNA.XFParallax;assembly=DevsDNA.XFParallax"
+             xmlns:local="clr-namespace:fhfh">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="StackLayoutSettings" TargetType="StackLayout">
+                <Setter Property="VerticalOptions" Value="FillAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="Orientation" Value="Vertical"/>
+            </Style>
+            
+            <Style x:Key="LabelSettings" TargetType="Label">
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+                <Setter Property="HorizontalOptions" Value="StartAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    
+    
+    <ContentPage.Content>
+        <TableView HasUnevenRows="true">
+            <TableRoot>
+              <TableSection>
+                    <ViewCell>
+                       <StackLayout HeightRequest="250"
+                                     VerticalOptions="FillAndExpand"
+                                     HorizontalOptions="FillAndExpand">
+                             <Frame HasShadow="false"
+                                    Padding="0"
+                                    IsClippedToBounds="true"
+                                     VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand">
+                                <StackLayout Style="{StaticResource StackLayoutSettings}"
+                                             Spacing="-75">
+                                    <Image x:Name="goodImage"
+                                           Aspect="AspectFill"
+                                           VerticalOptions="Fill"
+                                           HorizontalOptions="FillAndExpand"/>
+                                    <StackLayout Style="{StaticResource StackLayoutSettings}"
+                                                 BackgroundColor="Transparent">
+                                        <Button Image="smallCamera"
+                                                Margin="20"
+                                                HorizontalOptions="Start"
+                                                VerticalOptions="End"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </ViewCell>
+            </TableSection>
+                
+                
+                <TableSection>
+                    <ViewCell>
+                        <Grid HeightRequest="60">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="20"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Image Source="nameOfGood"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                                
+                            <Grid Grid.Column="1">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       x:Name="Nazvanie"
+                                       Text="Название"
+                                       FontSize="16"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"/>
+                            </Grid>
+                         
+                            
+                            <Grid Grid.Column="2">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       x:Name="nameOfGoodLabel"
+                                       TextColor="Gray"
+                                       FontSize="16"
+                                       FontAttributes="None"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+                                    
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                    
+                    <ViewCell>
+                        <Grid HeightRequest="60">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="20"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Image Source="costOfRent"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                                
+                            <Grid Grid.Column="1">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       Text="Цена"
+                                       FontSize="16"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"/>
+                            </Grid>
+                         
+                            
+                            <Grid Grid.Column="2">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       x:Name="costOfRentLabel"
+                                       TextColor="Gray"
+                                       FontSize="16"
+                                       FontAttributes="None"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+                                    
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                    
+                    <ViewCell>
+                        <Grid HeightRequest="60">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="20"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Image Source="pledge"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                                
+                            <Grid Grid.Column="1">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       Text="Залог"
+                                       FontSize="16"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"/>
+                            </Grid>
+                         
+                            
+                            <Grid Grid.Column="2">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       x:Name="pledgeLabel"
+                                       TextColor="Gray"
+                                       FontSize="16"
+                                       FontAttributes="None"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+                                    
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid HeightRequest="60">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="20"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Image Source="typeOfPayment"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                                
+                            <Grid Grid.Column="1">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       Text="Оплата"
+                                       FontSize="16"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"/>
+                            </Grid>
+                         
+                            
+                            <Grid Grid.Column="2">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       x:Name="typeOfPaymentLabel"
+                                       TextColor="Gray"
+                                       FontSize="16"
+                                       FontAttributes="None"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+                                    
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+                
+                
+                
+                <TableSection>
+                    <ViewCell>
+                        <Grid HeightRequest="60">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="20"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Image Source="quantity"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                                
+                            <Grid Grid.Column="1">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       Text="Количество"
+                                       FontSize="16"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"/>
+                            </Grid>
+                         
+                            
+                            <Grid Grid.Column="2">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       x:Name="quantityList"
+                                        Text="1x"
+                                       TextColor="Gray"
+                                       FontSize="16"
+                                       FontAttributes="None"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+                                    
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                    
+                    <ViewCell>
+                        <Grid HeightRequest="60">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="20"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Image Source="rentTime"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                                
+                            <Grid Grid.Column="1">
+                                <Label Style="{StaticResource LabelSettings}"
+                                       Text="Аренда"
+                                       FontSize="16"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"/>
+                            </Grid>
+                         
+                            
+                            <Grid Grid.Column="2">
+                                 <Label Style="{StaticResource LabelSettings}"
+                                       x:Name="rentDay"
+                                        Text="21.03.19-24.03.19"
+                                       TextColor="Gray"
+                                       FontSize="16"
+                                       FontAttributes="None"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"/>
+                                    
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+                
+                
+                <TableSection>
+                    <ViewCell>
+                        <Grid HeightRequest="60">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="30"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <Button Text="Получил товар"
+                                        BackgroundColor="#ef5e7a"
+                                        TextColor="White"
+                                        x:Name="goBtn"
+                                        FontSize="17"
+                                        BorderRadius="20"
+                                        CornerRadius="20"
+                                        Clicked="CloseDealBtnClicked"/>
+                            </Grid>
+                        </Grid>
+                    </ViewCell>
+                    
+                </TableSection>
+                
+                <TableSection></TableSection>
+                
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+
+</ContentPage>

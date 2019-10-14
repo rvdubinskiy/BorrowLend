@@ -1,0 +1,111 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="3.6.0.344457" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.0.0" />
+    <PackageReference Include="Plugin.Connectivity" Version="1.0.2" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
+    <PackageReference Include="Microsoft.Azure.NotificationHubs" Version="3.1.0" />
+    <PackageReference Include="Plugin.Permissions" Version="3.0.0.12" />
+    <PackageReference Include="DevsDNA.XFParallax" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="MyProfile.cs" />
+    <Compile Remove="HowToStart.xaml.cs" />
+    <Compile Remove="HTS.xaml.cs" />
+    <Compile Remove="Goods\GoodsStartPage.xaml.cs" />
+    <Compile Remove="Map.cs" />
+    <Compile Remove="DialogsPage.xaml.cs" />
+    <Compile Remove="Helpers\ChatPageViewModel.cs" />
+    <Compile Remove="Views\Cells\OutcomingViewCell.xaml.cs" />
+    <Compile Remove="Client\Client.cs" />
+    <Compile Remove="Client\Client2.cs" />
+    <Compile Remove="User\GoodInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="a.png" />
+    <None Remove="vkLogo.png" />
+    <None Remove="vk2.png" />
+    <None Remove="vk.png" />
+    <None Remove="Снимок экрана 2019-01-06 в 21.37.25.png" />
+    <None Remove="home.png" />
+    <None Remove="home2.png" />
+    <None Remove="home3.png" />
+    <None Remove="home4.png" />
+    <None Remove="home5.png" />
+    <None Remove="home6.png" />
+    <None Remove="home7.png" />
+    <None Remove="DialogsLib.dll" />
+    <None Remove="handshake.pdf" />
+    <None Remove="nm1.svg" />
+    <None Remove="Resource\advertising%403x.png" />
+    <None Remove="Resource\advertising%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="HowToStart.xaml" />
+    <EmbeddedResource Remove="HTS.xaml" />
+    <EmbeddedResource Remove="DialogsPage.xaml" />
+    <EmbeddedResource Remove="Views\Cells\OutcomingViewCell.xaml" />
+    <EmbeddedResource Remove="BorrowGoodsCloseDealPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="HowToS.xaml.cs">
+      <DependentUpon>HowToS.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Offer.xaml.cs">
+      <DependentUpon>Offer.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="questiosAndAnswer.xaml.cs">
+      <DependentUpon>questiosAndAnswer.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Partials\ChatInputBarView.xaml.cs">
+      <DependentUpon>ChatInputBarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Cells\OutgoingViewCell.xaml.cs">
+      <DependentUpon>OutgoingViewCell.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Goods\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\Cells\" />
+    <Folder Include="Views\Partials\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Models\" />
+    <Folder Include="Controls\" />
+    <Folder Include="Change\" />
+    <Folder Include="User\" />
+    <Folder Include="Screen\" />
+    <Folder Include="IPicker\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="UserLibrary">
+      <HintPath>..\..\UserLibrary\UserLibrary\obj\Debug\UserLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DonorSearchLib">
+      <HintPath>..\..\..\Downloads\DonorSearch-1\DonorSearchLib\bin\Debug\DonorSearchLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UserLibrary">
+      <HintPath>..\UserLibrary\obj\Debug\UserLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="DataLib">
+      <HintPath>..\..\..\..\Downloads\Release %284%29\DataLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

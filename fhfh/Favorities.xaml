@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.Favorities"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Title="Избранное"
+             ios:Page.LargeTitleDisplay="Always"
+             ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <ScrollView VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
+                                BackgroundColor="White"
+                                Orientation="Horizontal"
+                                HorizontalScrollBarVisibility="Never"
+                                VerticalScrollBarVisibility="Never">
+                    <StackLayout VerticalOptions="FillAndExpand"
+                                     Orientation="Horizontal"
+                                     BackgroundColor="White">
+                        <Frame Margin="10, 0, 0, 0" 
+                               HasShadow="false"
+                                   HeightRequest="40" 
+                                   WidthRequest="80" 
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="CenterAndExpand" 
+                                   CornerRadius="10" 
+                                   BackgroundColor="#8ce2c5">
+                            <StackLayout Orientation="Vertical" 
+                                             HorizontalOptions="FillAndExpand"
+                                             VerticalOptions="FillAndExpand">
+                                <Image VerticalOptions="StartAndExpand" 
+                                           HorizontalOptions="StartAndExpand"
+                                           WidthRequest="20" 
+                                           HeightRequest="20" 
+                                           Source="gardenIcon.png"/>
+                                <Label Text="Огород" 
+                                           FontFamily="Proxima Nova" 
+                                           TextColor="White" 
+                                           FontSize="10"
+                                           VerticalOptions="StartAndExpand" 
+                                           HorizontalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Margin="10, 0, 0, 0" 
+                               HasShadow="false"
+                                   HeightRequest="40" 
+                                   WidthRequest="80" 
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="CenterAndExpand" 
+                                   CornerRadius="10" 
+                                   BackgroundColor="Silver">
+                            <StackLayout Orientation="Vertical" 
+                                             HorizontalOptions="FillAndExpand"
+                                             VerticalOptions="FillAndExpand">
+                                <Image VerticalOptions="StartAndExpand" 
+                                           HorizontalOptions="StartAndExpand"
+                                           WidthRequest="20" 
+                                           HeightRequest="20" 
+                                           Source="gardenIcon.png"/>
+                                <Label Text="Телефоны и планшеты" 
+                                           FontFamily="Proxima Nova" 
+                                           TextColor="White" 
+                                           FontSize="10"
+                                           VerticalOptions="StartAndExpand" 
+                                           HorizontalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Margin="10, 0, 0, 0" 
+                               HasShadow="false"
+                                   HeightRequest="40" 
+                                   WidthRequest="80" 
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="CenterAndExpand" 
+                                   CornerRadius="10" 
+                                   BackgroundColor="Silver">
+                            <StackLayout Orientation="Vertical" 
+                                             HorizontalOptions="FillAndExpand"
+                                             VerticalOptions="FillAndExpand">
+                                <Image VerticalOptions="StartAndExpand" 
+                                           HorizontalOptions="StartAndExpand"
+                                           WidthRequest="20" 
+                                           HeightRequest="20" 
+                                           Source="gardenIcon.png"/>
+                                <Label Text="Автомобили" 
+                                           FontFamily="Proxima Nova" 
+                                           TextColor="White" 
+                                           FontSize="10"
+                                           VerticalOptions="StartAndExpand" 
+                                           HorizontalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Margin="10, 0, 0, 0" 
+                               HasShadow="false"
+                                   HeightRequest="40" 
+                                   WidthRequest="80" 
+                                   HorizontalOptions="Start"
+                                   VerticalOptions="CenterAndExpand" 
+                                   CornerRadius="10" 
+                                   BackgroundColor="Silver">
+                            <StackLayout Orientation="Vertical" 
+                                             HorizontalOptions="FillAndExpand"
+                                             VerticalOptions="FillAndExpand">
+                                <Image VerticalOptions="StartAndExpand" 
+                                           HorizontalOptions="StartAndExpand"
+                                           WidthRequest="20" 
+                                           HeightRequest="20" 
+                                           Source="gardenIcon.png"/>
+                                <Label Text="Огород" 
+                                           FontFamily="Proxima Nova" 
+                                           TextColor="White" 
+                                           FontSize="10"
+                                           VerticalOptions="StartAndExpand" 
+                                           HorizontalOptions="StartAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+                </Grid>
+            
+            <Grid Grid.Row="2">
+            <ScrollView x:Name="productsScroll"
+                        AbsoluteLayout.LayoutFlags="SizeProportional"
+                        AbsoluteLayout.LayoutBounds="0, 150, 1, 1"
+                        VerticalScrollBarVisibility="Never" 
+                        HorizontalScrollBarVisibility="Never"
+                        HorizontalOptions="FillAndExpand">
+                <StackLayout x:Name="productsLayout" 
+                             HorizontalOptions="FillAndExpand"
+                             BackgroundColor="#f4f4f4">
+                </StackLayout>
+            </ScrollView>
+         </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

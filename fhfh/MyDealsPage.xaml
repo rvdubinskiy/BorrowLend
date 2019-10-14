@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.MyDealsPage"
+             Title="Мои сделки"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="plus@3x.png" 
+                     Clicked="OnButtonClicked_CreateGoodsPage"/>
+    </ContentPage.ToolbarItems>
+    
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CategoryFrameStyle" TargetType="Frame">
+                <Setter Property="WidthRequest" 
+                        Value="100"/>
+                <Setter Property="HeightRequest"
+                        Value="30"/>
+                <Setter Property="HasShadow"
+                        Value="false"/>
+                <Setter Property="CornerRadius"
+                        Value="15"/>
+            </Style>
+            <Style x:Key="BoxViewLine" TargetType="BoxView">
+                <Setter Property="BackgroundColor"
+                        Value="#e9e9e9"/>
+                <Setter Property="HeightRequest"
+                        Value="1"/>
+                <Setter Property="WidthRequest"
+                        Value="1"/>
+            </Style>
+            <Style x:Key="GoodsFrame" TargetType="Frame">
+                <Setter Property="HasShadow"
+                        Value="false"/>
+                <Setter Property="CornerRadius"
+                        Value="10"/>
+                <Setter Property="IsClippedToBounds"
+                        Value="true"/>
+                <Setter Property="Padding"
+                        Value="0"/>
+            </Style>
+            <Style x:Key="GoodImage" TargetType="Image">
+                <Setter Property="HeightRequest"
+                        Value="237"/>
+                <Setter Property="WidthRequest"
+                        Value="200"/>
+                <Setter Property="HorizontalOptions"
+                        Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions"
+                        Value="FillAndExpand"/>
+                <Setter Property="Aspect"
+                        Value="AspectFill"/>
+            </Style>
+            <Style x:Key="LableCategoryStyle" TargetType="Label">
+                <Setter Property="Font"
+                        Value="13"/>
+                <Setter Property="TextColor"
+                        Value="White"/>
+            </Style>
+            <Style x:Key="LabelPriceOfGood" TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="Gray"/>
+                <Setter Property="Font"
+                        Value="13"/>
+            </Style>
+            <Style x:Key="LabelDiscription" TargetType="Label">
+                <Setter Property="Font"
+                        Value="16"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    
+    <ContentPage.Content>
+        <Grid RowSpacing="-1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            
+            <Grid Grid.Row="0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1">
+                        <Button Text="Переговоры"
+                                TextColor="Gray"
+                                Font="15"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="CenterAndExpand"/>
+                    </Grid>
+                    
+                    
+                    <Grid Grid.Column="2">
+                        <Button Text="Текущие"
+                                TextColor="Gray"
+                                Font="15"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="CenterAndExpand"/>
+                    </Grid>
+                    
+                    
+                    <Grid Grid.Column="3">
+                        <Button Text="Завершенные"
+                                TextColor="Gray"
+                                Font="15"
+                                VerticalOptions="CenterAndExpand"
+                                HorizontalOptions="CenterAndExpand"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            
+
+            <Grid Grid.Row="1">
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand">
+                    <ListView x:Name="NewsFrame"
+                              ItemsSource="{Binding List}"
+                              RowHeight="400"
+                              BackgroundColor="#e9e9e9"
+                              SeparatorVisibility="None"
+                              IsPullToRefreshEnabled="true"
+                              ItemTapped="GoToPageOfInfoAboutGood"
+                              Refreshing="CreateDealFrame">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame Style="{StaticResource GoodsFrame}"
+                                           Margin="10, 10, 10, 10">
+                                         <StackLayout BackgroundColor="Gray"
+                                                        Spacing="-100">
+                                            <Image Source="{Binding FrameImage}"
+                                                    Style="{StaticResource GoodImage}"/>
+                                            <StackLayout 
+                                                     HorizontalOptions="FillAndExpand"
+                                                     HeightRequest="220"
+                                                     BackgroundColor="White">
+                                                <Grid Padding="10">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="45"/>
+                                                        <RowDefinition Height="1"/>
+                                                        <RowDefinition Height="45"/>
+                                                        <RowDefinition Height="*"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid Grid.Row="0">
+                                                        <Grid>
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="*"/>
+                                                                <RowDefinition Height="*"/>
+                                                            </Grid.RowDefinitions>
+                                                            <Grid Grid.Row="0">
+                                                                <Label Text="{Binding NameOfGood}"
+                                                                       FontAttributes="Bold"/>
+                                                            </Grid>
+                                                            
+                                                            <Grid Grid.Row="1">
+                                                               <Label Text="{Binding PriceOfGood}"
+                                                                       Style="{StaticResource LabelPriceOfGood}"/>
+                                                            </Grid>
+                                                        </Grid>
+                                                    </Grid>
+                                                    
+                                                    
+                                                    <Grid Grid.Row="1">
+                                                        <StackLayout>
+                                                            <BoxView HeightRequest="1"
+                                                                     WidthRequest="1"
+                                                                     BackgroundColor="#e9e9e9"/>
+                                                        </StackLayout>
+                                                    </Grid>
+                                                    
+                                                    
+                                                    
+                                                    <Grid Grid.Row="2">
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="*"/>
+                                                                <ColumnDefinition Width="40"/>
+                                                                <ColumnDefinition Width="*"/>
+                                                            </Grid.ColumnDefinitions>
+                                                            <Grid Grid.Column="0">
+                                                                <Grid RowSpacing="-1">
+                                                                    <Grid.RowDefinitions>
+                                                                        <RowDefinition Height="*"/>
+                                                                        <RowDefinition Height="*"/>
+                                                                    </Grid.RowDefinitions>
+                                                                    <Grid Grid.Row="0">
+                                                                        <Label Text="Статус"
+                                                                               TextColor="Gray"
+                                                                               Font="14"/>
+                                                                    </Grid>
+                                                                    
+                                                                    <Grid Grid.Row="1">
+                                                                        <Label Text="Беру в аренду"
+                                                                               x:Name="statusOfDeal"
+                                                                               Font="12"/>
+                                                                    </Grid>
+                                                                </Grid>
+                                                            </Grid>
+                                                            
+                                                            
+                                                            <Grid Grid.Column="2">
+                                                                <Button Text="Написать"
+                                                                        TextColor="White"
+                                                                        BackgroundColor="#ef5e7a"
+                                                                        CornerRadius="22"
+                                                                        Font="16"/>
+                                                            </Grid>
+                                                        </Grid>
+                                                    </Grid>
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    <Grid Grid.Row="3">
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="*"/>
+                                                                <ColumnDefinition Width="40"/>
+                                                                <ColumnDefinition Width="*"/>
+                                                            </Grid.ColumnDefinitions>
+                                                            <Grid Grid.Column="0">
+                                                                <Grid RowSpacing="-1">
+                                                                    <Grid.RowDefinitions>
+                                                                        <RowDefinition Height="*"/>
+                                                                        <RowDefinition Height="*"/>
+                                                                    </Grid.RowDefinitions>
+                                                                    <Grid Grid.Row="0">
+                                                                        <Label Text="Владелец"
+                                                                               TextColor="Gray"
+                                                                               Font="14"/>
+                                                                    </Grid>
+                                                                    
+                                                                    <Grid Grid.Row="1">
+                                                                        <StackLayout Orientation="Horizontal"
+                                                                                     HorizontalOptions="FillAndExpand"
+                                                                                     VerticalOptions="FillAndExpand">
+                                                                            <Label Text="{Binding UserDates.Surname}"
+                                                                               TextColor="Black"
+                                                                               Font="12"/>
+                                                                            <Label Text="{Binding UserDates.Name}"
+                                                                               TextColor="Black"
+                                                                               Font="12"/>
+                                                                        </StackLayout>
+                                                                    </Grid>
+                                                                </Grid>
+                                                            </Grid>
+                                                            
+                                                            
+                                                            <Grid Grid.Column="2">
+                                                                <Button Text="Детали"
+                                                                        TextColor="Black"
+                                                                        BackgroundColor="#White"
+                                                                        CornerRadius="22"
+                                                                        BorderWidth="1"
+                                                                        BorderColor="Black"
+                                                                        Font="16"
+                                                                        Clicked="OnButtonClicked_BorrowPage"/>
+                                                            </Grid>
+                                                        </Grid>
+                                                    </Grid>
+                                                    
+                                                    
+                                                    <Grid Grid.Row="4">
+                                                        <Grid>
+                                                            <Grid.ColumnDefinitions>
+                                                                <ColumnDefinition Width="*"/>
+                                                                <ColumnDefinition Width="40"/>
+                                                                <ColumnDefinition Width="*"/>
+                                                            </Grid.ColumnDefinitions>
+                                                            <Grid Grid.Column="0">
+                                                                <Grid RowSpacing="-1">
+                                                                    <Grid.RowDefinitions>
+                                                                        <RowDefinition Height="*"/>
+                                                                        <RowDefinition Height="*"/>
+                                                                    </Grid.RowDefinitions>
+                                                                    <Grid Grid.Row="0">
+                                                                        <Label Text="Состояние"
+                                                                               
+                                                                               TextColor="Gray"
+                                                                               Font="14"/>
+                                                                    </Grid>
+                                                                    
+                                                                    <Grid Grid.Row="1">
+                                                                        <Label Text="Ожидание подтверждения"
+                                                                               x:Name="senseOfDeal"
+                                                                               Font="12"/>
+                                                                    </Grid>
+                                                                </Grid>
+                                                            </Grid>
+                                                        </Grid>
+                                                    </Grid>
+                                                </Grid>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Grid>
+            
+            
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

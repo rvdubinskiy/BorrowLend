@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.questiosAndAnswer"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Title="Вопрос-ответ"
+             ios:Page.LargeTitleDisplay="Never"
+             ios:Page.UseSafeArea="true">
+    <ContentPage.Content>
+        <Grid RowSpacing="-1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="400"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid RowSpacing="-1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                        <Grid Grid.Row="0">
+                        <Frame HasShadow="false"
+                               BorderColor="#e9e9e9"
+                               CornerRadius="0">
+                            <StackLayout Orientation="Horizontal"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="Как начать работу в приложении?"
+                                       TextColor="Black"
+                                       Font="12"
+                                       FontAttributes="Bold"
+                                       Margin="2"/>
+                                <Button Image="arrowf.png"
+                                        HorizontalOptions="EndAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HeightRequest="20"
+                                        WidthRequest="20"
+                                        Clicked="OnButtonClicked_HowToC"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Frame HasShadow="false"
+                               BorderColor="#e9e9e9"
+                               CornerRadius="0">
+                            <StackLayout Orientation="Horizontal"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="Меню приложения"
+                                       TextColor="Black"
+                                       Font="12"
+                                       FontAttributes="Bold"
+                                       Margin="2"/>
+                                <Button Image="arrowf.png"
+                                        HorizontalOptions="EndAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HeightRequest="20"
+                                        WidthRequest="20"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Frame HasShadow="false"
+                               BorderColor="#e9e9e9"
+                               CornerRadius="0">
+                            <StackLayout Orientation="Horizontal"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="Аккаунт/Профиль"
+                                       TextColor="Black"
+                                       Font="12"
+                                       FontAttributes="Bold"
+                                       Margin="2"/>
+                                <Button Image="arrowf.png"
+                                        HorizontalOptions="EndAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HeightRequest="20"
+                                        WidthRequest="20"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Frame HasShadow="false"
+                               BorderColor="#e9e9e9"
+                               CornerRadius="0">
+                            <StackLayout Orientation="Horizontal"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="Услуги приложения"
+                                       TextColor="Black"
+                                       Font="12"
+                                       FontAttributes="Bold"
+                                       Margin="2"/>
+                                <Button Image="arrowf.png"
+                                        HorizontalOptions="EndAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HeightRequest="20"
+                                        WidthRequest="20"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Frame HasShadow="false"
+                               BorderColor="#e9e9e9"
+                               CornerRadius="0">
+                            <StackLayout Orientation="Horizontal"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="Настройки"
+                                       TextColor="Black"
+                                       Font="12"
+                                       FontAttributes="Bold"
+                                       Margin="2"/>
+                                <Button Image="arrowf.png"
+                                        HorizontalOptions="EndAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HeightRequest="20"
+                                        WidthRequest="20"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                        <Grid Grid.Row="5">
+                        <Frame HasShadow="false"
+                               BorderColor="#e9e9e9"
+                               CornerRadius="0">
+                            <StackLayout Orientation="Horizontal"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="Уведомления"
+                                       TextColor="Black"
+                                       Font="12"
+                                       FontAttributes="Bold"
+                                       Margin="2"/>
+                                <Button Image="arrowf.png"
+                                        HorizontalOptions="EndAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HeightRequest="20"
+                                        WidthRequest="20"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                        <Grid Grid.Row="6">
+                        <Frame HasShadow="false"
+                               BorderColor="#e9e9e9"
+                               CornerRadius="0">
+                            <StackLayout Orientation="Horizontal"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="Не нашел ответа на свой вопрос"
+                                       TextColor="Black"
+                                       Font="12"
+                                       FontAttributes="Bold"
+                                       Margin="2"/>
+                                <Button Image="arrowf.png"
+                                        HorizontalOptions="EndAndExpand"
+                                        VerticalOptions="FillAndExpand"
+                                        HeightRequest="20"
+                                        WidthRequest="20"
+                                        Clicked="OnButtonClicked_TechSupport"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1"
+                  BackgroundColor="#e9e9e9">
+            </Grid>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+ 

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fhfh.ViewModels.FrameForGoods">
+    <Frame HasShadow="false"
+           IsClippedToBounds="true"
+           Padding="0"
+           CornerRadius="10">
+        <StackLayout BackgroundColor="Gray"
+                     Spacing="-100">
+            <Button Image="Resource/shurup.png"
+                   VerticalOptions="FillAndExpand"
+                   HorizontalOptions="FillAndExpand"
+                    HeightRequest="237"
+                    WidthRequest="200"/>
+            <StackLayout 
+                     HorizontalOptions="FillAndExpand"
+                     HeightRequest="220"
+                     BackgroundColor="White">
+                <Grid Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Label Text="Дрель-шуруповерт DeWALT DCD 710 C2"
+                                       FontAttributes="Bold"/>
+                            </Grid>
+                            
+                            <Grid Grid.Row="1">
+                                <Label Text="6 000/шт"
+                                       TextColor="Gray"
+                                       Font="13"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    
+                    
+                    <Grid Grid.Row="1">
+                        <StackLayout>
+                            <BoxView HeightRequest="1"
+                                     WidthRequest="1"
+                                     BackgroundColor="#e9e9e9"/>
+                        </StackLayout>
+                    </Grid>
+                    
+                    
+                    
+                    <Grid Grid.Row="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Grid RowSpacing="-1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <Label Text="Статус"
+                                               TextColor="Gray"
+                                               Font="14"/>
+                                    </Grid>
+                                    
+                                    <Grid Grid.Row="1">
+                                        <Label Text="Беру в аренду"
+                                               Font="12"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            
+                            
+                            <Grid Grid.Column="2">
+                                <Button Text="Написать"
+                                        TextColor="White"
+                                        BackgroundColor="#ef5e7a"
+                                        CornerRadius="22"
+                                        Font="16"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    
+                    
+                    
+                    
+                    <Grid Grid.Row="3">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Grid RowSpacing="-1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <Label Text="Владелец"
+                                               TextColor="Gray"
+                                               Font="14"/>
+                                    </Grid>
+                                    
+                                    <Grid Grid.Row="1">
+                                        <Label Text="Максим Пермяков"
+                                               Font="12"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            
+                            
+                            <Grid Grid.Column="2">
+                                <Button Text="Детали"
+                                        TextColor="Black"
+                                        BackgroundColor="#White"
+                                        CornerRadius="22"
+                                        BorderWidth="1"
+                                        BorderColor="Black"
+                                        Font="16"
+                                        />
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    
+                    
+                    
+                    
+                    <Grid Grid.Row="4">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0">
+                                <Grid RowSpacing="-1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid Grid.Row="0">
+                                        <Label Text="Состояние"
+                                               TextColor="Gray"
+                                               Font="14"/>
+                                    </Grid>
+                                    
+                                    <Grid Grid.Row="1">
+                                        <Label Text="Ожидание выплаты"
+                                               Font="12"/>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</ViewCell>

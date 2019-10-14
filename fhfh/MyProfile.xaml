@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.MyProfile"
+             xmlns:local="clr-namespace:fhfh"
+             Title="Мой профиль"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assemly=ImageCircle.Forms.Plugin.Abstractions"
+             ios:Page.LargeTitleDisplay="Never">
+ <ContentPage.Content>
+        <TableView HasUnevenRows="true"
+                   Intent="Data">
+            <TableRoot>
+              <TableSection Title=" ">
+                    <ViewCell>
+                    <StackLayout>
+                    <Grid RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                <!--   name     -->
+                        <Grid Grid.Row="0">
+                           <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Grid.Column="0">
+                                    <Grid Padding="15">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="10"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="30"/>
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid Grid.Row="1">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="153"/>
+                                                    <ColumnDefinition Width="40"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0">
+                                                    <Label x:Name="nameInProfile"
+                                                           TranslationY="10"
+                                                           FontSize="Medium" 
+                                                           FontAttributes="Bold"/>
+                                                </Grid>
+                                                
+                                                <Grid Grid.Column="1">
+                                                    <Image Source="pass.png" 
+                                                           HeightRequest="40" 
+                                                           WidthRequest="40"
+                                                           VerticalOptions="Start" 
+                                                           HorizontalOptions="StartAndExpand"/>
+                                                </Grid>
+                                            </Grid>
+                                        </Grid>
+                                        
+                                        <Grid Grid.Row="2">
+                                            <StackLayout HorizontalOptions="Start"
+                                                         HeightRequest="25"
+                                                         x:Name="raitingSystemStack"
+                                                         Orientation="Horizontal">
+                                                <Button Image="grayStar"
+                                                        x:Name="firstStar"
+                                                       WidthRequest="15"
+                                                       HeightRequest="15"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       HorizontalOptions="Start"
+                                                       Margin="0, 0, 0, 0"/>
+                                                <Button Image="grayStar"
+                                                        x:Name="secondStar"
+                                                       WidthRequest="15"
+                                                       HeightRequest="15"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       HorizontalOptions="Start"
+                                                       Margin="0, 0, 0, 0"/>
+                                                <Button Image="grayStar"
+                                                        x:Name="thirdStar"
+                                                       WidthRequest="15"
+                                                       HeightRequest="15"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       HorizontalOptions="Start"
+                                                       Margin="0, 0, 0, 0"/>
+                                                <Button Image="grayStar"
+                                                        x:Name="forthStar"
+                                                       WidthRequest="15"
+                                                       HeightRequest="15"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       HorizontalOptions="Start"
+                                                       Margin="0, 0, 0, 0"/>
+                                                <Button Image="grayStar"
+                                                        x:Name="fifthStar"
+                                                       WidthRequest="15"
+                                                       HeightRequest="15"
+                                                       VerticalOptions="CenterAndExpand"
+                                                       HorizontalOptions="Start"
+                                                       Margin="0, 0, 0, 0"/>
+                                            </StackLayout>
+                                        </Grid>
+                                        
+                                        <Grid Grid.Row="3">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Город: "
+                                                       BackgroundColor="White"/>
+                                                    <StackLayout Spacing="-1">
+                                                        <!--<local:MyEntry IsEnabled="false"
+                                                                       Placeholder="Москва"
+                                                                       TextColor="Black"/>
+                                                        <BoxView HeightRequest="1"
+                                                                 WidthRequest="1"
+                                                                 BackgroundColor="Black"/>-->
+                                                        <Label Text="Москва"
+                                                               TextDecorations="Underline"/>
+                                                    </StackLayout>
+                                            </StackLayout>
+                                        </Grid>
+                                        
+                                        <Grid Grid.Row="4">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="Промокод: "
+                                                       Font="14"
+                                                       TextColor="Gray"
+                                                       BackgroundColor="White"/>
+                                                    <StackLayout Spacing="-1">
+                                                        <!--<local:MyEntry IsEnabled="false"
+                                                                       Placeholder="4545MSI"
+                                                                       FontSize="Medium"
+                                                                       PlaceholderColor="Gray"/>
+                                                        <BoxView HeightRequest="1"
+                                                                 WidthRequest="1"
+                                                                 BackgroundColor="Silver"/>-->
+                                                        <Label x:Name="promocodeLabel"
+                                                            Text="4545MSI"
+                                                               Font="14"
+                                                               TextColor="Gray"
+                                                               TextDecorations="Underline"/>
+                                                    </StackLayout>
+                                            </StackLayout>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+                                
+                                
+                                <Grid Grid.Column="1">
+                                    <local:MyImage x:Name="image1"
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="CenterAndExpand"
+                                           HeightRequest="120"
+                                           WidthRequest="120"
+                                                   Aspect="AspectFill"
+                                           >
+                                                <local:MyImage.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                        Tapped="Handle_Tapped"/>
+                                                </local:MyImage.GestureRecognizers>
+                                    </local:MyImage>
+                                </Grid>
+                            </Grid>
+                        </Grid> 
+                       
+
+                <!--   photo     -->
+                        
+                    </Grid>
+                    </StackLayout>
+                        </ViewCell>
+                </TableSection>
+                
+                
+                
+                
+                <TableSection>
+                    <ViewCell>
+                        <ScrollView 
+                                        Orientation="Horizontal"
+                                            VerticalOptions="FillAndExpand"
+                                            HorizontalOptions="FillAndExpand"
+                                            HorizontalScrollBarVisibility="Never">
+                                    <StackLayout Orientation="Horizontal"
+                                                 VerticalOptions="FillAndExpand"
+                                                 HorizontalOptions="FillAndExpand"
+                                                 BackgroundColor="White"
+                                                 Spacing="5"
+                                                 HeightRequest="60">
+                                    
+                                    <Frame HasShadow="false"
+                                           Margin="10"
+                                           Padding="5">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="1"/>
+                                            </Grid.RowDefinitions>
+                                        
+                                            <Grid Grid.Row="0">
+                                                <Button Text="ИНФОРМАЦИЯ"
+                                                   Font="12"
+                                                   TextColor="Gray"
+                                                       HorizontalOptions="FillAndExpand" 
+                                                    VerticalOptions="Start"/>
+                                            </Grid>
+                                        
+                                        
+                                            <Grid Grid.Row="1">
+                                                <BoxView BackgroundColor="#ef5e7a"
+                                                         HeightRequest="5"
+                                                         CornerRadius="1"
+                                                         VerticalOptions="End"/>
+                                            </Grid>
+                                         </Grid>
+                                    </Frame>
+                                
+                                
+                                    <Frame HasShadow="false"
+                                           Margin="1">
+                                         <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="1"/>
+                                            </Grid.RowDefinitions>
+                                        
+                                            <Grid Grid.Row="0">
+                                                <Button Text="ВИТРИНА"
+                                                        Font="12"
+                                                        TextColor="Gray"
+                                                        Clicked="OnButtonClicked_UserWindow"
+                                                        VerticalOptions="Start"/>
+                                            </Grid>
+                                         </Grid>
+                                    </Frame>
+                                
+                                
+                                
+                                    <Frame HasShadow="false"
+                                           Margin="1">
+                                    <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="1"/>
+                                            </Grid.RowDefinitions>
+                                        
+                                            <Grid Grid.Row="0">
+                                                <Button Text="В АРЕНДЕ"
+                                               Font="12"
+                                               TextColor="Gray"
+                                                 VerticalOptions="Start"
+                                                />
+                                            </Grid>
+                                         </Grid>
+                                    </Frame>
+                                
+                                
+                                
+                                    <Frame HasShadow="false"
+                                           Margin="1"
+                                           Padding="5">
+                                    
+                                    <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="1"/>
+                                            </Grid.RowDefinitions>
+                                        
+                                            <Grid Grid.Row="0">
+                                                <Button Text="ОТЗЫВЫ"
+                                               Font="12"
+                                               TextColor="Gray"
+                                                VerticalOptions="Start"
+                                                />
+                                            </Grid>
+                                         </Grid>
+                                    </Frame>
+                                        
+                                    </StackLayout>
+                                </ScrollView>
+                    </ViewCell>
+                </TableSection>
+                
+                
+                
+                
+                <TableSection >
+                    <ViewCell>
+                        <StackLayout 
+                                     VerticalOptions="FillAndExpand"
+                                      HorizontalOptions="FillAndExpand">
+                        <ScrollView x:Name="fieldsScroll"
+                                    IsVisible="true"
+                                     VerticalScrollBarVisibility="Never"
+                                     VerticalOptions="FillAndExpand"
+                                     HorizontalOptions="FillAndExpand">
+                                 <StackLayout VerticalOptions="FillAndExpand"
+                                              HorizontalOptions="FillAndExpand"
+                                              Spacing="-1">
+                                    <Frame HasShadow="false"
+                                           BorderColor="#e9e9e9"
+                                           CornerRadius="0"
+                                           >
+                                        <StackLayout Orientation="Horizontal"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand">
+                                            <Label Text="Ввести промокод"
+                                                   Font="12"
+                                                   TextColor="Black"
+                                                   FontAttributes="Bold"
+                                                   Margin="2"/>
+                                            <Button Image="arrowf.png"
+                                                    HorizontalOptions="EndAndExpand"
+                                                    VerticalOptions="FillAndExpand"
+                                                    HeightRequest="20"
+                                                    WidthRequest="40"
+                                                    Clicked="GoToPromocodePage"/>
+                                        </StackLayout>
+                                    </Frame>
+                                    
+                                    
+        <!--            visible = false                /-->
+                                    <Frame x:Name="promocodeFrame"
+                                           HasShadow="false"
+                                           IsVisible="false"
+                                           BorderColor="#e9e9e9"
+                                           CornerRadius="0">
+                                        <StackLayout Orientation="Horizontal"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Grid.Column="0">
+                                                    <Entry x:Name="entryCode"
+                                                            Placeholder="Введите промокод"
+                                                           HeightRequest="40"
+                                                           HorizontalOptions="EndAndExpand"
+                                                           VerticalOptions="EndAndExpand"
+                                                           WidthRequest="200"/>
+                                                </Grid>
+                                                
+                                                <Grid Grid.Column="1">
+                                                    <StackLayout HorizontalOptions="EndAndExpand"
+                                                                 VerticalOptions="Center">
+                                                        <Button Text="Сохранить"
+                                                            TextColor="#ef5e7a"
+                                                            WidthRequest="100"
+                                                            HeightRequest="20"
+                                                                Clicked="CheckPromocode"
+                                                            HorizontalOptions="End"
+                                                            VerticalOptions="Center"/>
+                                                    </StackLayout>
+                                                </Grid>
+                                                
+                                            </Grid>
+                                            
+                                            
+                                        </StackLayout>
+                                    </Frame>
+                                    
+                                    
+                                    
+                                    <Frame HasShadow="false"
+                                           BorderColor="#e9e9e9"
+                                           CornerRadius="0">
+                                        <StackLayout Orientation="Horizontal"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand">
+                                            <Label Text="Вопросы и ответы"
+                                                   Font="12"
+                                                   TextColor="Black"
+                                                   FontAttributes="Bold"
+                                                   Margin="2"/>
+                                            <Button Image="arrowf.png"
+                                                    HorizontalOptions="EndAndExpand"
+                                                    VerticalOptions="FillAndExpand"
+                                                    HeightRequest="20"
+                                                    WidthRequest="40"
+                                                    Clicked="OnButtonClicked"/>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Frame HasShadow="false"
+                                           BorderColor="#e9e9e9"
+                                           CornerRadius="0">
+                                        <StackLayout Orientation="Horizontal"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand">
+                                            <Label Text="Оферта"
+                                                   Font="12"
+                                                   TextColor="Black"
+                                                   FontAttributes="Bold"
+                                                   Margin="2"/>
+                                            <Button Image="arrowf.png"
+                                                    HorizontalOptions="EndAndExpand"
+                                                    VerticalOptions="FillAndExpand"
+                                                    HeightRequest="20"
+                                                    WidthRequest="40"
+                                                    Clicked="OnButtonClicked_Offer"/>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Frame HasShadow="false"
+                                           BorderColor="#e9e9e9"
+                                           CornerRadius="0">
+                                        <StackLayout Orientation="Horizontal"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand">
+                                            <Label Text="Настройки"
+                                                   Font="12"
+                                                   TextColor="Black"
+                                                   FontAttributes="Bold"
+                                                   Margin="2"/>
+                                            <Button Image="arrowf.png"
+                                                    HorizontalOptions="EndAndExpand"
+                                                    VerticalOptions="FillAndExpand"
+                                                    HeightRequest="20"
+                                                    WidthRequest="40"
+                                                    Clicked="OnButtonClicked_Settings"/>
+                                        </StackLayout>
+                                    </Frame>
+                                    <Frame HasShadow="false"
+                                           BorderColor="#e9e9e9"
+                                           CornerRadius="0">
+                                        <StackLayout Orientation="Horizontal"
+                                                     HorizontalOptions="FillAndExpand"
+                                                     VerticalOptions="FillAndExpand">
+                                            <Label Text="Мои данные"
+                                                   Font="12"
+                                                   TextColor="Black"
+                                                   FontAttributes="Bold"
+                                                   Margin="2"/>
+                                            <Button Image="arrowf.png"
+                                                    HorizontalOptions="EndAndExpand"
+                                                    VerticalOptions="FillAndExpand"
+                                                    HeightRequest="20"
+                                                    WidthRequest="40"
+                                                    Clicked="OnButtonClicked_MyDate"/>
+                                                    
+                                        </StackLayout>
+                                    </Frame>
+                                 </StackLayout>
+                            </ScrollView>
+                                 
+                            </StackLayout>
+                            
+                            
+                        
+                        
+                    </ViewCell>
+                </TableSection>
+                
+
+                
+                
+                
+                
+            </TableRoot>
+        </TableView>
+
+    </ContentPage.Content>
+</ContentPage>

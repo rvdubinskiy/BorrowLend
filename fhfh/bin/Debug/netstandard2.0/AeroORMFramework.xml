@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AeroORMFramework</name>
+    </assembly>
+    <members>
+        <member name="T:AeroORMFramework.AutoincrementIDAttribute">
+            <summary>
+            This attribute is set to a property which must be autoincremented
+            </summary>
+        </member>
+        <member name="T:AeroORMFramework.Connector">
+            <summary>
+            Main class, the object of which connects the entities of the programm
+            with database
+            </summary>
+        </member>
+        <member name="P:AeroORMFramework.Connector.ConnectionString">
+            <summary>
+            Typical azure connection string with server and database parameters
+            </summary>
+        </member>
+        <member name="M:AeroORMFramework.Connector.#ctor(System.String)">
+            <summary>
+            Initializes the connection to database with the given connection string
+            </summary>
+        </member>
+        <member name="M:AeroORMFramework.Connector.#ctor(System.Data.SqlClient.SqlConnection)">
+            <summary>
+            Initializes the connection to database with the given connection
+            </summary>
+            <param name="connection"></param>
+        </member>
+        <member name="M:AeroORMFramework.Connector.AddTable``1">
+            <summary>
+            Creates a table which represents the given entity
+            </summary>
+            <typeparam name="Entity">
+            The typw which will be represented in the table
+            </typeparam>
+        </member>
+        <member name="M:AeroORMFramework.Connector.GetAllProperties(System.Type)">
+            <summary>
+            Gets all properties of a given type (if it has at least one)
+            and returns the list of them
+            </summary>
+            <exception cref="T:AeroORMFramework.NotAppropriateTypeException">
+            Throws that exception when the type has no public instance property
+            </exception>
+        </member>
+        <member name="M:AeroORMFramework.Connector.GetAllRecords``1">
+            <summary>
+            Gets all records from the table which represents the given type
+            </summary>
+            <returns>The list of objects</returns>
+        </member>
+        <member name="M:AeroORMFramework.Connector.GetRecords``1(System.String,System.Object)">
+            <summary>
+            Gets all records where the value of a given column is equal to value
+            </summary>
+            <returns>The List of found entities</returns>
+        </member>
+        <member name="M:AeroORMFramework.Connector.Insert``1(``0)">
+            <summary>
+            Inserts the object recrod in the table which represents the type
+            </summary>
+        </member>
+        <member name="M:AeroORMFramework.Connector.DeleteTable``1">
+            <summary>
+            Delete the table which represents the given type
+            </summary>
+        </member>
+        <member name="M:AeroORMFramework.Connector.DeleteRecord``1(``0)">
+            <summary>
+            Deletes the record which represents the given object
+            </summary>
+            <typeparam name="Entity">The type of the object</typeparam>
+            <param name="entity">The object which will be deleted</param>
+        </member>
+        <member name="M:AeroORMFramework.Connector.GetRecord``1(System.String,System.Object)">
+            <summary>
+            Finds the record which satisfies the given parameters
+            </summary>
+            <typeparam name="Entity">
+            The type of the object that will be returned
+            </typeparam>
+            <param name="columnName">
+            The name of the property, on which the search wil be based
+            </param>
+            <param name="value">
+            The value which you want to find
+            </param>
+            <returns>
+            The object of the type given
+            </returns>
+        </member>
+        <member name="M:AeroORMFramework.Connector.UpdateRecord``1(``0)">
+            <summary>
+            Updates the record (basing on the primary key property) with the
+            given new record
+            </summary>
+        </member>
+        <member name="T:AeroORMFramework.CustomTypes.Json`1">
+            <summary>
+            Stores the json STRING representation of the object
+            </summary>
+            <typeparam name="Type">Type can be any type</typeparam>
+        </member>
+        <member name="M:AeroORMFramework.Database.CreateNewTable``1(System.Collections.Generic.List{System.Reflection.PropertyInfo})">
+            <summary>
+            Creates new table in the database which represents the given type entity
+            </summary>
+            <param name="propertiesList">
+            List of properties which are defined in the type
+            </param>
+        </member>
+        <member name="M:AeroORMFramework.Database.CreateEntitiesList``1(System.Data.SqlClient.SqlDataReader)">
+            <summary>
+            Creates the list of entities (with help of already executed sqlDataReader)
+            of a given type and sets the properties of every instance
+            </summary>
+        </member>
+        <member name="M:AeroORMFramework.Database.FindRecord``1(System.String,System.Object)">
+            <summary>
+            Finds the record in the table which satisfies the given parameters
+            </summary>
+            <param name="columnName">The name of the property, based on which the search is going</param>
+            <param name="value">the value of the property</param>
+            <returns>The instance of the Entity if the object was found, the empty object otherwise</returns>
+        </member>
+        <member name="M:AeroORMFramework.Database.GetFindingProperty``1(System.String)">
+            <summary>
+            Returns the Property Info object which indicates which 
+            property will be used in the search
+            </summary>
+            <param name="columnName"> The string name of the property</param>
+        </member>
+        <member name="M:AeroORMFramework.Database.GetTheRecordInTheListOfEntities``1(System.Collections.Generic.List{``0},System.Reflection.PropertyInfo,System.Object)">
+            <summary>
+            Finds and returns the entity in the List of entities
+            </summary>
+        </member>
+        <member name="T:AeroORMFramework.NotAppropriateTypeException">
+            <summary>
+            Exception which is thrown when the input type when creation 
+            of a new table is proceeding is wrong
+            </summary>
+        </member>
+        <member name="T:AeroORMFramework.NotAppropriateParamException">
+            <summary>
+            Exception which is thrown when an input parameter is wrong
+            </summary>
+        </member>
+        <member name="T:AeroORMFramework.SetAzureSQLDataTypeAttribute">
+            <summary>
+            Attribute which is used to set the azure sql data type,
+            if the programmer isnt sutisfied with the default choice
+            </summary>
+        </member>
+        <!-- Проигнорирован некорректный комментарий XML для члена "M:AeroORMFramework.SqlCommandBuilder.SetCanBeNullString(System.Reflection.PropertyInfo)" -->
+        <member name="M:AeroORMFramework.SqlCommandBuilder.SetAzureSqlDataType(System.Reflection.PropertyInfo)">
+            <summary>
+            If the programmer decided to set the data type himself, then we set this type,
+            otherwise we take the default 
+            </summary>
+            <returns>
+            The data-type
+            </returns>
+        </member>
+        <member name="M:AeroORMFramework.SqlCommandBuilder.InsertInitialColsInTheCommandText(System.Collections.Generic.List{System.Reflection.PropertyInfo})">
+            <summary>
+            Inserts the names of the columns, their data types and additional parameters
+            into the string
+            </summary>
+            <returns>
+            The string which descries the tables, and then put into the command text
+            </returns>
+        </member>
+        <member name="M:AeroORMFramework.SqlCommandBuilder.GetPrimaryProperty``1">
+            <summary>
+            Returns a property which is marked with a primary key attribute
+            </summary>
+        </member>
+        <member name="P:AeroORMFramework.TypeConverter.TypesDictionary">
+            <summary>
+            Dictionary which matches the types from C# to types of Azure SQL
+            </summary>
+        </member>
+        <!-- Проигнорирован некорректный комментарий XML для члена "M:AeroORMFramework.TypeConverter.GetAzureSQLType(System.Type)" -->
+    </members>
+</doc>

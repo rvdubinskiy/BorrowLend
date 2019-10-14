@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fhfh.RequestToTechnicSuppPage"
+             xmlns:local="clr-namespace:fhfh">
+    <ContentPage.Content>
+         <AbsoluteLayout VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        BackgroundColor="White">
+           <!-- <StackLayout HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="Start"
+                         AbsoluteLayout.LayoutFlags="WidthProportional"
+                         AbsoluteLayout.LayoutBounds="0, 0, 1, 50"
+                         HeightRequest="50" 
+                         BackgroundColor="White" 
+                         Orientation="Horizontal">
+                <Image Source="Resources/backIcon.png" 
+                           WidthRequest="20" 
+                           HeightRequest="20"
+                           Margin="10, 0, 0, 0"
+                           VerticalOptions="CenterAndExpand"/>
+                <Label Text="Запрос в тех. поддержку" 
+                           TextColor="Black" 
+                           FontFamily="Proxima Nova" 
+                           FontSize="15"
+                           HorizontalOptions="FillAndExpand" 
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center"
+                           VerticalOptions="FillAndExpand"
+                           Margin="0, 0, 30, 0"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand" 
+                             HeightRequest="2" 
+                             AbsoluteLayout.LayoutFlags="WidthProportional"
+                             AbsoluteLayout.LayoutBounds="0, 50, 1, 2"
+                             BackgroundColor="#f0f0f0">
+            </StackLayout>-->
+            <StackLayout Orientation="Vertical"
+                             x:Name="InfoLayout" 
+                             AbsoluteLayout.LayoutFlags="WidthProportional" 
+                             AbsoluteLayout.LayoutBounds="0, 20, 1, 70"
+                             BackgroundColor="White">
+                <Label VerticalOptions="Start"
+                           HorizontalOptions="FillAndExpand"
+                           HeightRequest="70"
+                           FontFamily="Proxima Nova" 
+                           FontSize="15"
+                           Margin="30,0,10,50"                   
+                           x:Name="AskLabel"
+                           Text="Если вы не нашли ответа на вопрос, то здесь вы можете задать его нам напрямую"/>
+            </StackLayout>
+            <StackLayout AbsoluteLayout.LayoutFlags="WidthProportional"
+                             AbsoluteLayout.LayoutBounds="0, 90, 1, 70"
+                             Orientation="Vertical">
+                <Label TextColor="#000000"
+                           FontFamily="Proxima Nova"
+                           FontSize="14"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="FillAndExpand"
+                           Text="Ваш e-mail"
+                           Margin="30,0,0,0"/>
+                <local:MyEntry Placeholder="Например, Ivanov@mail.ru"
+                                              VerticalOptions="Start" 
+                                              HorizontalOptions="Center"
+                                              FontFamily="Proxima Nova"
+                                              FontSize="16"
+                                              WidthRequest="350"
+                                              Margin="30,-5,10,0"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand"
+                         AbsoluteLayout.LayoutFlags="WidthProportional"
+                         AbsoluteLayout.LayoutBounds="0, 140, 1, 1"
+                             BackgroundColor="#d6d6d6"                 
+                             HeightRequest="1"/>
+            <StackLayout AbsoluteLayout.LayoutFlags="WidthProportional" 
+                             AbsoluteLayout.LayoutBounds="0, 140, 1, 130"
+                             Orientation="Vertical">
+                <Label TextColor="#000000"
+                       FontFamily="Proxima Nova"
+                       FontSize="14"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="StartAndExpand"
+                       Text="Ваш вопрос"
+                       Margin="30,35,30,0"/>
+                <local:MyEntry Placeholder="Например, проблемы с выбором наличного и безналичного расчета"
+                                           Margin="30,0,10,0"
+                                           FontFamily="Proxima Nova"
+                                           FontSize="16"
+                                           
+                                           VerticalOptions="FillAndExpand"
+                                           HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand"
+                         AbsoluteLayout.LayoutFlags="WidthProportional"
+                         AbsoluteLayout.LayoutBounds="0, 260, 1, 1"
+                         BackgroundColor="#d6d6d6"                 
+                         HeightRequest="1"/>
+            <StackLayout AbsoluteLayout.LayoutFlags="WidthProportional" 
+                         AbsoluteLayout.LayoutBounds="0, 361, 1, 100"
+                         Orientation="Vertical">
+                <Button x:Name="askBtn" 
+                            Text="Отправить" 
+                            TextColor="White" 
+                            FontAttributes="None" 
+                            HorizontalOptions="CenterAndExpand" 
+                            VerticalOptions="CenterAndExpand"
+                            FontFamily="Proxima Nova" 
+                            BackgroundColor="#ef5e7a" 
+                            WidthRequest="200" 
+                            HeightRequest="40" 
+                            FontSize="14"
+                            BorderRadius="15"
+                            Margin="10"
+                            Clicked="OnButtonClicked_Back"/>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,144 @@
+/Users/romandubinskiy/Projects/fhfh/fhfh/bin/Debug/netstandard2.0/fhfh.deps.json
+/Users/romandubinskiy/Projects/fhfh/fhfh/bin/Debug/netstandard2.0/fhfh.dll
+/Users/romandubinskiy/Projects/fhfh/fhfh/bin/Debug/netstandard2.0/fhfh.pdb
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.csprojAssemblyReference.cache
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.csproj.CoreCompileInputs.cache
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.AssemblyInfoInputs.cache
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.AssemblyInfo.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.dll
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.pdb
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/HowToS.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/Offer.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/questiosAndAnswer.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/Settings.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/Favorities.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/StartPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/Presentation.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/MyDate.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/RegistrationPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/Authorization.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/RemindPassPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/GoodsStartPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/YourGoodRequest.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/MessagesPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/UserWindowPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/MyDealsPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/SelectLocationPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/CreateGoodsPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/PageOfGoods.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/MyProfile.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/RequestToTechnicSuppPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.csproj.CopyComplete
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/FromMessageToDialogs.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/Views/Cells/IncomingViewCell.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/Views/Cells/OutgoingViewCell.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/Views/ChatPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/Views/Partials/ChatInputBarView.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/TesterPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/BorrowGoodsFirstPage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/bin/Debug/netstandard2.0/UserLibrary.dll
+/Users/romandubinskiy/Projects/fhfh/fhfh/bin/Debug/netstandard2.0/UserLibrary.pdb
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/RegisrtationPage3_lastStage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/RegistrationPage2_nextStage.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/bin/Debug/netstandard2.0/DonorSearchLib.dll
+/Users/romandubinskiy/Projects/fhfh/fhfh/bin/Debug/netstandard2.0/DonorSearchLib.pdb
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/BorrowGoodsCloseDealPage1.xaml.g.cs
+/Users/romandubinskiy/Projects/fhfh/fhfh/obj/Debug/netstandard2.0/Vitrina.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.csprojAssemblyReference.cache
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/Authorization.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/BorrowGoodsCloseDealPage1.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/BorrowGoodsFirstPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/CreateGoodsPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/Favorities.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/FromMessageToDialogs.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/GoodsStartPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/HowToS.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/MessagesPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/MyDate.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/MyDealsPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/MyProfile.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/Offer.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/PageOfGoods.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/Presentation.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/questiosAndAnswer.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/RegisrtationPage3_lastStage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/RegistrationPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/RegistrationPage2_nextStage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/RemindPassPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/RequestToTechnicSuppPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/SelectLocationPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/Settings.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/StartPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/TesterPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/UserWindowPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/Views/Cells/IncomingViewCell.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/Views/Cells/OutgoingViewCell.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/Views/ChatPage.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/Views/Partials/ChatInputBarView.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/Vitrina.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/YourGoodRequest.xaml.g.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.csproj.CoreCompileInputs.cache
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.AssemblyInfoInputs.cache
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.AssemblyInfo.cs
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.dll
+/Volumes/жесткарик/фото с др маши/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.pdb
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.csprojAssemblyReference.cache
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/Authorization.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/BorrowGoodsCloseDealPage1.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/BorrowGoodsFirstPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/CreateGoodsPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/Favorities.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/FromMessageToDialogs.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/GoodsStartPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/HowToS.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/MessagesPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/MyDate.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/MyDealsPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/MyProfile.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/Offer.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/PageOfGoods.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/Presentation.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/questiosAndAnswer.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/RegisrtationPage3_lastStage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/RegistrationPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/RegistrationPage2_nextStage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/RemindPassPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/RequestToTechnicSuppPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/SelectLocationPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/Settings.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/StartPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/UserWindowPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/Views/Cells/IncomingViewCell.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/Views/Cells/OutgoingViewCell.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/Views/ChatPage.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/Views/Partials/ChatInputBarView.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/Vitrina.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/YourGoodRequest.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.csproj.CoreCompileInputs.cache
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.AssemblyInfoInputs.cache
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.AssemblyInfo.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.dll
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.pdb
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/bin/Debug/netstandard2.0/fhfh.deps.json
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/bin/Debug/netstandard2.0/fhfh.dll
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/bin/Debug/netstandard2.0/fhfh.pdb
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/bin/Debug/netstandard2.0/UserLibrary.dll
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/bin/Debug/netstandard2.0/UserLibrary.pdb
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.csproj.CopyComplete
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/ViewModels/FrameForGoods.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/bin/Debug/netstandard2.0/DataLib.dll
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/bin/Debug/netstandard2.0/AeroORMFramework.dll
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/bin/Debug/netstandard2.0/DataLib.pdb
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/bin/Debug/netstandard2.0/AeroORMFramework.pdb
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/bin/Debug/netstandard2.0/AeroORMFramework.xml
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/fhfh.csproj.Fody.CopyLocal.cache
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/BorrowPageForCustomer.xaml.g.cs
+/Users/romandubinskiy/Desktop/MyProject/fhfh/fhfh/obj/Debug/netstandard2.0/PageOfGoodAfterGetADeal.xaml.g.cs

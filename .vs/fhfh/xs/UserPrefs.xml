@@ -1,0 +1,67 @@
+﻿<Properties StartupConfiguration="{4DA84FDA-E434-4C64-AD83-5EBD233E5732}|Default">
+  <MonoDevelop.Ide.ItemProperties.fhfh.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.8bdda24e72a4a2ecd8724d8714e79e610808b0b8" />
+  <MonoDevelop.Ide.ItemProperties.fhfh.Android AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="fhfh/Authorization.xaml.cs">
+    <Files>
+      <File FileName="fhfh/Authorization.xaml.cs" Line="39" Column="66" />
+      <File FileName="fhfh/StartPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="fhfh/StartPage.xaml" />
+      <File FileName="fhfh/GoodsStartPage.xaml.cs" Line="40" Column="11" />
+      <File FileName="fhfh.iOS/Info.plist" />
+      <File FileName="fhfh/App.xaml.cs" Line="22" Column="54" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="fhfh" expanded="True">
+            <Node name="fhfh" expanded="True">
+              <Node name="Controls" expanded="True" />
+              <Node name="Goods" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+              <Node name="Authorization.xaml" expanded="True">
+                <Node name="Authorization.xaml.cs" selected="True" />
+              </Node>
+              <Node name="BorrowGoodsCloseDealPage1.xaml" expanded="True" />
+              <Node name="BorrowGoodsFirstPage.xaml" expanded="True" />
+              <Node name="BorrowPageForCustomer.xaml" expanded="True" />
+              <Node name="CreateGoodsPage.xaml" expanded="True" />
+              <Node name="Favorities.xaml" expanded="True" />
+              <Node name="FromMessageToDialogs.xaml" expanded="True" />
+              <Node name="GoodsStartPage.xaml" expanded="True" />
+              <Node name="HowToS.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+              <Node name="MessagesPage.xaml" expanded="True" />
+              <Node name="MyDate.xaml" expanded="True" />
+              <Node name="MyDealsPage.xaml" expanded="True" />
+              <Node name="MyProfile.xaml" expanded="True" />
+              <Node name="Offer.xaml" expanded="True" />
+              <Node name="PageOfGoodAfterGetADeal.xaml" expanded="True" />
+              <Node name="PageOfGoods.xaml" expanded="True" />
+              <Node name="Presentation.xaml" expanded="True" />
+              <Node name="questiosAndAnswer.xaml" expanded="True" />
+              <Node name="RegisrtationPage3_lastStage.xaml" expanded="True" />
+              <Node name="RegistrationPage.xaml" expanded="True" />
+              <Node name="RegistrationPage2_nextStage.xaml" expanded="True" />
+              <Node name="RemindPassPage.xaml" expanded="True" />
+              <Node name="RequestToTechnicSuppPage.xaml" expanded="True" />
+              <Node name="SelectLocationPage.xaml" expanded="True" />
+              <Node name="Settings.xaml" expanded="True" />
+              <Node name="StartPage.xaml" expanded="True" />
+              <Node name="UserWindowPage.xaml" expanded="True" />
+              <Node name="Vitrina.xaml" expanded="True" />
+              <Node name="YourGoodRequest.xaml" expanded="True" />
+            </Node>
+            <Node name="fhfh.iOS" expanded="True" />
+            <Node name="UserLibrary" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

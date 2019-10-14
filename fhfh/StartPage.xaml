@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:fhfh" 
+             x:Class="fhfh.StartPage">
+     <NavigationPage Icon="home@3x" Title="Лента"
+                     BarTextColor="#ef5e7a">
+        <x:Arguments>
+            <local:GoodsStartPage/>
+        </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Icon="star@3x" Title="Избранное"
+                    BarTextColor="#ef5e7a">
+        <x:Arguments>
+            <local:Favorities/>
+        </x:Arguments>
+    </NavigationPage>
+    
+    <NavigationPage Icon="handshake@3x" Title="Товары"
+                    BarTextColor="#ef5e7a">
+        <x:Arguments>
+            <local:MyDealsPage/>
+        </x:Arguments>
+    </NavigationPage>
+    
+   <NavigationPage Icon="speech_buble@3x" Title="Сообщения"
+                   BarTextColor="#ef5e7a">
+            <x:Arguments>
+                <local:MessagesPage/>
+            </x:Arguments>
+    </NavigationPage>
+    <NavigationPage Title="Мой профиль" Icon="menu@3x"
+                    BarTextColor="#ef5e7a">
+            <x:Arguments>
+                <local:MyProfile/>
+            </x:Arguments>
+    </NavigationPage>
+    
+</TabbedPage>

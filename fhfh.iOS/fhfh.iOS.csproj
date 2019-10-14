@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4DA84FDA-E434-4C64-AD83-5EBD233E5732}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>fhfh.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>fhfh.iOS</AssemblyName>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchI18n>west</MtouchI18n>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchI18n>west</MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MyEnterRenderer.cs" />
+    <Compile Include="MyPickerRenderer.cs" />
+    <Compile Include="CustomPageRanderer.cs" />
+    <Compile Include="Renderers\ChatEntryRenderer.cs" />
+    <Compile Include="Renderers\CustomEditorRenderer.cs" />
+    <Compile Include="Renderers\ExtendedListViewRenderer.cs" />
+    <None Include="FodyWeavers.xml" />
+    <Compile Include="PicturePickerImplementation.cs" />
+    <Compile Include="CustomImageRenderer.cs" />
+    <Compile Include="Effects\SearchBarEffect.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icons8-маска-анонимуса-120.png" />
+    <ImageAsset Include="Assets.xcassets\press3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\press3.imageset\pres3.png" />
+    <ImageAsset Include="Assets.xcassets\press3.imageset\pres3-1.png" />
+    <ImageAsset Include="Assets.xcassets\press3.imageset\pres3-2.png" />
+    <ImageAsset Include="Assets.xcassets\p1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\p1.imageset\p1.png" />
+    <ImageAsset Include="Assets.xcassets\p1.imageset\p1-1.png" />
+    <ImageAsset Include="Assets.xcassets\p1.imageset\p1-2.png" />
+    <ImageAsset Include="Assets.xcassets\advertising%403x.imageset\advertising%403x.png" />
+    <ImageAsset Include="Assets.xcassets\advertising%403x.imageset\advertising%403x-1.png" />
+    <ImageAsset Include="Assets.xcassets\advertising%403x.imageset\advertising%403x-2.png" />
+    <ImageAsset Include="Assets.xcassets\advertising%403x.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\arrowf.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\arrowf.imageset\arrowf.png" />
+    <ImageAsset Include="Assets.xcassets\arrowf.imageset\arrowf-1.png" />
+    <ImageAsset Include="Assets.xcassets\arrowf.imageset\arrowf-2.png" />
+    <ImageAsset Include="Assets.xcassets\p2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\p2.imageset\p2.png" />
+    <ImageAsset Include="Assets.xcassets\p2.imageset\p2-1.png" />
+    <ImageAsset Include="Assets.xcassets\p2.imageset\p2-2.png" />
+    <ImageAsset Include="Assets.xcassets\cross.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cross.imageset\cross.png" />
+    <ImageAsset Include="Assets.xcassets\cross.imageset\cross-1.png" />
+    <ImageAsset Include="Assets.xcassets\cross.imageset\cross-2.png" />
+    <ImageAsset Include="Assets.xcassets\pres2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\pres2.imageset\pres2.png" />
+    <ImageAsset Include="Assets.xcassets\pres2.imageset\pres2-1.png" />
+    <ImageAsset Include="Assets.xcassets\pres2.imageset\pres2-2.png" />
+    <ImageAsset Include="Assets.xcassets\pres3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\pres3.imageset\pres3.png" />
+    <ImageAsset Include="Assets.xcassets\pres3.imageset\pres3-1.png" />
+    <ImageAsset Include="Assets.xcassets\pres3.imageset\pres3-2.png" />
+    <ImageAsset Include="Assets.xcassets\present.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\present.imageset\present.png" />
+    <ImageAsset Include="Assets.xcassets\present.imageset\present-1.png" />
+    <ImageAsset Include="Assets.xcassets\present.imageset\present-2.png" />
+    <ImageAsset Include="Assets.xcassets\home%403x.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\handshake%403x.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\handshake%403x.imageset\handshake%403x-1.png" />
+    <ImageAsset Include="Assets.xcassets\speech_buble%403x.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\star%403x.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\menu%403x.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\menu%403x.imageset\menu%403x-1.png" />
+    <ImageAsset Include="Assets.xcassets\star%403x.imageset\star%403x-1.png" />
+    <ImageAsset Include="Assets.xcassets\speech_buble%403x.imageset\speech_buble%403x-1.png" />
+    <ImageAsset Include="Assets.xcassets\home%403x.imageset\home%403x-1.png" />
+    <ImageAsset Include="Assets.xcassets\handshake%403x.imageset\handshake%403x-2.png" />
+    <ImageAsset Include="Assets.xcassets\stars.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\stars.imageset\stars.png" />
+    <ImageAsset Include="Assets.xcassets\stars.imageset\stars-1.png" />
+    <ImageAsset Include="Assets.xcassets\stars.imageset\stars-2.png" />
+    <ImageAsset Include="Assets.xcassets\camera.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\camera.imageset\camera.png" />
+    <ImageAsset Include="Assets.xcassets\camera.imageset\camera-1.png" />
+    <ImageAsset Include="Assets.xcassets\camera.imageset\camera-2.png" />
+    <ImageAsset Include="Assets.xcassets\tick.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\tick.imageset\tick.png" />
+    <ImageAsset Include="Assets.xcassets\tick.imageset\tick-1.png" />
+    <ImageAsset Include="Assets.xcassets\tick.imageset\tick-2.png" />
+    <ImageAsset Include="Assets.xcassets\yellowStar.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\yellowStar.imageset\yellowStar.png" />
+    <ImageAsset Include="Assets.xcassets\yellowStar.imageset\yellowStar-1.png" />
+    <ImageAsset Include="Assets.xcassets\yellowStar.imageset\yellowStar-2.png" />
+    <ImageAsset Include="Assets.xcassets\yellowStar.imageset\yellowStar-3.png" />
+    <ImageAsset Include="Assets.xcassets\grayStar.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\grayStar.imageset\grayStar.png" />
+    <ImageAsset Include="Assets.xcassets\grayStar.imageset\grayStar-1.png" />
+    <ImageAsset Include="Assets.xcassets\grayStar.imageset\grayStar-2.png" />
+    <ImageAsset Include="Assets.xcassets\whiteStar.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\whiteStar.imageset\whiteStar.png" />
+    <ImageAsset Include="Assets.xcassets\whiteStar.imageset\whiteStar-1.png" />
+    <ImageAsset Include="Assets.xcassets\whiteStar.imageset\whiteStar-2.png" />
+    <ImageAsset Include="Assets.xcassets\smallCamera.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\smallCamera.imageset\smallCamera.png" />
+    <ImageAsset Include="Assets.xcassets\smallCamera.imageset\smallCamera-1.png" />
+    <ImageAsset Include="Assets.xcassets\smallCamera.imageset\smallCamera-2.png" />
+    <ImageAsset Include="Assets.xcassets\pledge.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\pledge.imageset\pledge.png" />
+    <ImageAsset Include="Assets.xcassets\pledge.imageset\pledge-1.png" />
+    <ImageAsset Include="Assets.xcassets\pledge.imageset\pledge-2.png" />
+    <ImageAsset Include="Assets.xcassets\nameOfGood.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\nameOfGood.imageset\nameOfGood.png" />
+    <ImageAsset Include="Assets.xcassets\nameOfGood.imageset\nameOfGood-1.png" />
+    <ImageAsset Include="Assets.xcassets\nameOfGood.imageset\nameOfGood-2.png" />
+    <ImageAsset Include="Assets.xcassets\costOfRent.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\costOfRent.imageset\costOfRent.png" />
+    <ImageAsset Include="Assets.xcassets\costOfRent.imageset\costOfRent-1.png" />
+    <ImageAsset Include="Assets.xcassets\costOfRent.imageset\costOfRent-2.png" />
+    <ImageAsset Include="Assets.xcassets\typeOfPayment.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\typeOfPayment.imageset\typeOfPayment.png" />
+    <ImageAsset Include="Assets.xcassets\typeOfPayment.imageset\typeOfPayment-1.png" />
+    <ImageAsset Include="Assets.xcassets\typeOfPayment.imageset\typeOfPayment-2.png" />
+    <ImageAsset Include="Assets.xcassets\rentTime.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\rentTime.imageset\rentTime.png" />
+    <ImageAsset Include="Assets.xcassets\rentTime.imageset\rentTime-1.png" />
+    <ImageAsset Include="Assets.xcassets\rentTime.imageset\rentTime-2.png" />
+    <ImageAsset Include="Assets.xcassets\quantity.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\quantity.imageset\quantity.png" />
+    <ImageAsset Include="Assets.xcassets\quantity.imageset\quantity-1.png" />
+    <ImageAsset Include="Assets.xcassets\quantity.imageset\quantity-2.png" />
+    <ImageAsset Include="Assets.xcassets\tools.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\tools.imageset\icons8-ящик-для-инструментов-64.png" />
+    <ImageAsset Include="Assets.xcassets\tools.imageset\icons8-ящик-для-инструментов-64-1.png" />
+    <ImageAsset Include="Assets.xcassets\tools.imageset\icons8-ящик-для-инструментов-64-2.png" />
+    <ImageAsset Include="Assets.xcassets\cars.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\cars.imageset\icons8-сталкивающиеся-автомобили-filled-50.png" />
+    <ImageAsset Include="Assets.xcassets\cars.imageset\icons8-сталкивающиеся-автомобили-filled-50-1.png" />
+    <ImageAsset Include="Assets.xcassets\cars.imageset\icons8-сталкивающиеся-автомобили-filled-50-2.png" />
+    <ImageAsset Include="Assets.xcassets\electric.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\electric.imageset\icons8-imac-filled-50.png" />
+    <ImageAsset Include="Assets.xcassets\electric.imageset\icons8-imac-filled-50-1.png" />
+    <ImageAsset Include="Assets.xcassets\electric.imageset\icons8-imac-filled-50-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
+    <PackageReference Include="Xamarin.TestCloud.Agent" Version="0.21.8" />
+    <PackageReference Include="Xamarin.Forms.Maps">
+      <Version>3.6.0.344457</Version>
+    </PackageReference>
+    <PackageReference Include="PropertyChanged.Fody">
+      <Version>3.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="DevsDNA.XFParallax">
+      <Version>1.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\fhfh\fhfh.csproj">
+      <Project>{BB3C6310-A5F7-4371-B1FF-79BBCBA27760}</Project>
+      <Name>fhfh</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo.png" />
+    <BundleResource Include="MonoTouch\advertising%403x.png" />
+    <BundleResource Include="MonoTouch\ar.png" />
+    <BundleResource Include="MonoTouch\arrow.png" />
+    <BundleResource Include="MonoTouch\arrowf.png" />
+    <BundleResource Include="MonoTouch\backar.png" />
+    <BundleResource Include="MonoTouch\briefcase%403x.png" />
+    <BundleResource Include="MonoTouch\buy%403x.png" />
+    <BundleResource Include="MonoTouch\chat.png" />
+    <BundleResource Include="MonoTouch\cross.png" />
+    <BundleResource Include="MonoTouch\discuss.png" />
+    <BundleResource Include="MonoTouch\facebookLogo.png" />
+    <BundleResource Include="MonoTouch\gardenIcon.png" />
+    <BundleResource Include="MonoTouch\handshake.png" />
+    <BundleResource Include="MonoTouch\HOME.png" />
+    <BundleResource Include="MonoTouch\home%403x.png" />
+    <BundleResource Include="MonoTouch\hs.png" />
+    <BundleResource Include="MonoTouch\informationIcon.png" />
+    <BundleResource Include="MonoTouch\instagramLogo.png" />
+    <BundleResource Include="MonoTouch\logo.png" />
+    <BundleResource Include="MonoTouch\map.png" />
+    <BundleResource Include="MonoTouch\menu.png" />
+    <BundleResource Include="MonoTouch\menu%403x.png" />
+    <BundleResource Include="MonoTouch\menu2.png" />
+    <BundleResource Include="MonoTouch\message.png" />
+    <BundleResource Include="MonoTouch\myprofile1.png" />
+    <BundleResource Include="MonoTouch\newhome.png" />
+    <BundleResource Include="MonoTouch\Newmenu.png" />
+    <BundleResource Include="MonoTouch\newstar.png" />
+    <BundleResource Include="MonoTouch\odnoclassnikiLogo.png" />
+    <BundleResource Include="MonoTouch\p1.png" />
+    <BundleResource Include="MonoTouch\p2.png" />
+    <BundleResource Include="MonoTouch\paper_plane%403x.png" />
+    <BundleResource Include="MonoTouch\pasport.png" />
+    <BundleResource Include="MonoTouch\pass.png" />
+    <BundleResource Include="MonoTouch\people2.png" />
+    <BundleResource Include="MonoTouch\person.png" />
+    <BundleResource Include="MonoTouch\piece.png" />
+    <BundleResource Include="MonoTouch\plus.png" />
+    <BundleResource Include="MonoTouch\plus%403x.png" />
+    <BundleResource Include="MonoTouch\plus2.png" />
+    <BundleResource Include="MonoTouch\points.png" />
+    <BundleResource Include="MonoTouch\pres2.png" />
+    <BundleResource Include="MonoTouch\present.png" />
+    <BundleResource Include="MonoTouch\privacy.png" />
+    <BundleResource Include="MonoTouch\profile.png" />
+    <BundleResource Include="MonoTouch\roots.png" />
+    <BundleResource Include="MonoTouch\searchIcon.png" />
+    <BundleResource Include="MonoTouch\shurup.png" />
+    <BundleResource Include="MonoTouch\snowflake.png" />
+    <BundleResource Include="MonoTouch\speech_buble%403x.png" />
+    <BundleResource Include="MonoTouch\star.png" />
+    <BundleResource Include="MonoTouch\star%403x.png" />
+    <BundleResource Include="MonoTouch\star3.png" />
+    <BundleResource Include="MonoTouch\stars.png" />
+    <BundleResource Include="MonoTouch\three.png" />
+    <BundleResource Include="MonoTouch\tools.png" />
+    <BundleResource Include="MonoTouch\vk3.png" />
+    <BundleResource Include="MonoTouch\whiteStarIcon.png" />
+    <BundleResource Include="Resources\pres1.png" />
+    <BundleResource Include="MonoTouch\handshake%403x.png" />
+    <BundleResource Include="camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MonoTouch\" />
+    <Folder Include="Renderers\" />
+    <Folder Include="Assets.xcassets\press3.imageset\" />
+    <Folder Include="Assets.xcassets\p1.imageset\" />
+    <Folder Include="Assets.xcassets\cross.imageset\" />
+    <Folder Include="Assets.xcassets\advertising%403x.imageset\" />
+    <Folder Include="Assets.xcassets\ar.imageset\" />
+    <Folder Include="Assets.xcassets\arrowf.imageset\" />
+    <Folder Include="Assets.xcassets\p2.imageset\" />
+    <Folder Include="Assets.xcassets\present.imageset\" />
+    <Folder Include="Assets.xcassets\cross.imageset\" />
+    <Folder Include="Assets.xcassets\pres2.imageset\" />
+    <Folder Include="Assets.xcassets\pres3.imageset\" />
+    <Folder Include="Assets.xcassets\present.imageset\" />
+    <Folder Include="Assets.xcassets\home%403x.imageset\" />
+    <Folder Include="Assets.xcassets\handshake%403x.imageset\" />
+    <Folder Include="Assets.xcassets\speech_buble%403x.imageset\" />
+    <Folder Include="Assets.xcassets\star%403x.imageset\" />
+    <Folder Include="Assets.xcassets\menu%403x.imageset\" />
+    <Folder Include="Assets.xcassets\stars.imageset\" />
+    <Folder Include="Assets.xcassets\camera.imageset\" />
+    <Folder Include="Effects\" />
+    <Folder Include="Assets.xcassets\tick.imageset\" />
+    <Folder Include="Assets.xcassets\yellowStar.imageset\" />
+    <Folder Include="Assets.xcassets\grayStar.imageset\" />
+    <Folder Include="Assets.xcassets\whiteStar.imageset\" />
+    <Folder Include="Assets.xcassets\smallCamera.imageset\" />
+    <Folder Include="Assets.xcassets\pledge.imageset\" />
+    <Folder Include="Assets.xcassets\nameOfGood.imageset\" />
+    <Folder Include="Assets.xcassets\costOfRent.imageset\" />
+    <Folder Include="Assets.xcassets\typeOfPayment.imageset\" />
+    <Folder Include="Assets.xcassets\typeOfPayment.imageset\" />
+    <Folder Include="Assets.xcassets\rentTime.imageset\" />
+    <Folder Include="Assets.xcassets\quantity.imageset\" />
+    <Folder Include="Assets.xcassets\tools.imageset\" />
+    <Folder Include="Assets.xcassets\cars.imageset\" />
+    <Folder Include="Assets.xcassets\electric.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MonoTouch\pres3.png" />
+  </ItemGroup>
+</Project>

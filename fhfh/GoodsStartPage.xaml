@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.GoodsStartPage"
+             xmlns:local="clr-namespace:fhfh"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.LargeTitleDisplay="Always">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CategoryFrameStyle" TargetType="Frame">
+                <Setter Property="WidthRequest" 
+                        Value="100"/>
+                <Setter Property="HeightRequest"
+                        Value="30"/>
+                <Setter Property="HasShadow"
+                        Value="false"/>
+                <Setter Property="CornerRadius"
+                        Value="15"/>
+            </Style>
+            <Style x:Key="BoxViewLine" TargetType="BoxView">
+                <Setter Property="BackgroundColor"
+                        Value="#e9e9e9"/>
+                <Setter Property="HeightRequest"
+                        Value="1"/>
+                <Setter Property="WidthRequest"
+                        Value="1"/>
+            </Style>
+            <Style x:Key="GoodsFrame" TargetType="Frame">
+                <Setter Property="HasShadow"
+                        Value="false"/>
+                <Setter Property="CornerRadius"
+                        Value="10"/>
+                <Setter Property="IsClippedToBounds"
+                        Value="true"/>
+                <Setter Property="Padding"
+                        Value="0"/>
+            </Style>
+            <Style x:Key="GoodImage" TargetType="Image">
+                <Setter Property="HeightRequest"
+                        Value="237"/>
+                <Setter Property="WidthRequest"
+                        Value="200"/>
+                <Setter Property="HorizontalOptions"
+                        Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions"
+                        Value="FillAndExpand"/>
+                <Setter Property="Aspect"
+                        Value="AspectFill"/>
+            </Style>
+            <Style x:Key="LableCategoryStyle" TargetType="Label">
+                <Setter Property="Font"
+                        Value="13"/>
+                <Setter Property="TextColor"
+                        Value="White"/>
+            </Style>
+            <Style x:Key="LabelPriceOfGood" TargetType="Label">
+                <Setter Property="TextColor"
+                        Value="Gray"/>
+                <Setter Property="Font"
+                        Value="13"/>
+            </Style>
+            <Style x:Key="LabelDiscription" TargetType="Label">
+                <Setter Property="Font"
+                        Value="11"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid RowSpacing="-0.6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions> 
+            
+            <Grid Grid.Row="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1">
+                        <BoxView BackgroundColor="Silver"
+                                 CornerRadius="2"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            
+            
+            
+            <Grid Grid.Row="2">
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand">
+                    <ListView x:Name="NewsFrame"
+                              ItemsSource="{Binding List}"
+                              RowHeight="300"
+                              BackgroundColor="#e9e9e9"
+                              SeparatorVisibility="None"
+                              IsPullToRefreshEnabled="true"
+                              ItemTapped="GoToPageOfInfoAboutGood"
+                              Refreshing="GenerateGoodsFrame">
+                        <ListView.Header>
+                            <ScrollView Orientation="Horizontal"
+                                        BackgroundColor="Transparent"
+                                        HorizontalScrollBarVisibility="Never">
+                                <StackLayout Orientation="Horizontal"
+                                             VerticalOptions="FillAndExpand"
+                                             HorizontalOptions="FillAndExpand"
+                                             Margin="10,5,10,0"
+                                             HeightRequest="70"
+                                             x:Name="CategoryList">
+                                    <Frame Style="{StaticResource CategoryFrameStyle}"
+                                           BackgroundColor="#ef5e7a"
+                                           x:Name="frame0"
+                                           Padding="10">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="GetCategory0"/>
+                                        </Frame.GestureRecognizers>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <Image Source="electric"
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="StartAndExpand"/>
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <Label Style="{StaticResource LableCategoryStyle}"
+                                                       Text="Электроника"/>
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+                                    
+                                    
+                                    <Frame Style="{StaticResource CategoryFrameStyle}"
+                                           BackgroundColor="#a5a5a5"
+                                           x:Name="frame1"
+                                           Padding="10">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="GetCategory1"/>
+                                        </Frame.GestureRecognizers>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <Image Source="tools"
+                                                       VerticalOptions="Start"
+                                                       HorizontalOptions="StartAndExpand"/>
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <Label Style="{StaticResource LableCategoryStyle}"
+                                                       Text="Инструменты"/>
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+                                    
+                                    
+                                    
+                                    <Frame Style="{StaticResource CategoryFrameStyle}"
+                                           BackgroundColor="#a5a5a5"
+                                           x:Name="frame2"
+                                           Padding="10">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="GetCategory2"/>
+                                        </Frame.GestureRecognizers>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <Image Source="cars"
+                                                       VerticalOptions="Start"
+                                                       HorizontalOptions="StartAndExpand"/>
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <Label Style="{StaticResource LableCategoryStyle}"
+                                                       Text="Автомобили"/>
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+                                    
+                                    
+                                    
+                                    <Frame Style="{StaticResource CategoryFrameStyle}"
+                                           BackgroundColor="#a5a5a5"
+                                           x:Name="frame3"
+                                           Padding="10">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="GetCategory3"/>
+                                        </Frame.GestureRecognizers>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <Image Source="tools2.png"
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="StartAndExpand"/>
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <Label Style="{StaticResource LableCategoryStyle}"
+                                                       Text="Телефоны и планшеты"/>
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+                                    
+                                    
+                                    <Frame Style="{StaticResource CategoryFrameStyle}"
+                                           BackgroundColor="#a5a5a5"
+                                           x:Name="frame4"
+                                           Padding="10">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="GetCategory4"/>
+                                        </Frame.GestureRecognizers>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <Image Source="tools2.png"
+                                                       VerticalOptions="Center"
+                                                       HorizontalOptions="StartAndExpand"/>
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <Label Style="{StaticResource LableCategoryStyle}"
+                                                       Text="Огород"/>
+                                            </Grid>
+                                        </Grid>
+                                    </Frame>
+                                    
+                                    
+                                </StackLayout>
+                            </ScrollView>
+                        </ListView.Header>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame Style="{StaticResource GoodsFrame}"
+                                           Margin="10, 10, 10, 10">
+                                        <StackLayout BackgroundColor="Gray"
+                                                     Spacing="-100">
+                                            <Image Source="{Binding FrameImage}"
+                                                    Style="{StaticResource GoodImage}"/>
+                                            <StackLayout 
+                                                     HorizontalOptions="FillAndExpand"
+                                                     HeightRequest="360"
+                                                     BackgroundColor="White">
+                                                <Grid Padding="10">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="45"/>
+                                                        <RowDefinition Height="1"/>
+                                                        <RowDefinition Height="*"/>
+                                                    </Grid.RowDefinitions>
+                                                    <Grid Grid.Row="0">
+                                                        <Grid>
+                                                            <Grid.RowDefinitions>
+                                                                <RowDefinition Height="*"/>
+                                                                <RowDefinition Height="*"/>
+                                                            </Grid.RowDefinitions>
+                                                            <Grid Grid.Row="0">
+                                                                <Label Text="{Binding NameOfGood}"
+                                                                       FontSize="16"
+                                                                       FontAttributes="Bold"/>
+                                                            </Grid>
+                                                            
+                                                            <Grid Grid.Row="1">
+                                                                <Label Text="{Binding PriceOfGood}"
+                                                                       Style="{StaticResource LabelPriceOfGood}"/>
+                                                            </Grid>
+                                                        </Grid>
+                                                    </Grid>
+                                                    
+                                                    
+                                                    <Grid Grid.Row="1">
+                                                        <StackLayout>
+                                                            <BoxView Style="{StaticResource BoxViewLine}"/>
+                                                        </StackLayout>
+                                                    </Grid>
+                                                    
+                                                    
+                                                    <Grid Grid.Row="2">
+                                                        <Label Style="{StaticResource LabelDiscription}"
+                                                               Text="{Binding DiscriptionOfGood}"/>
+                                                    </Grid>
+                                                  
+                                                    
+                                                </Grid>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

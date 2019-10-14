@@ -1,0 +1,32 @@
+﻿using System;
+using fhfh;
+using fhfh.iOS;
+using UIKit;
+using Foundation;
+using Xamarin.Forms;
+
+[assembly: ExportRenderer(typeof(ContentPage), typeof(MyViewController))]
+namespace fhfh.iOS
+{
+    public partial class MyViewController : UIViewController
+    {
+        public MyViewController() : base("MyViewController", null)
+        {
+
+        }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+            // Perform any additional setup after loading the view, typically from a nib.
+        }
+
+        public override void DidReceiveMemoryWarning()
+        {
+            base.DidReceiveMemoryWarning();
+            // Release any cached data, images, etc that aren't in use.
+        }
+    }
+}
+

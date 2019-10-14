@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.RegistrationPage"
+             xmlns:local="clr-namespace:fhfh"
+             Title="Регистрация">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand" 
+                    BackgroundColor="White">
+        <StackLayout x:Name="logoLayout" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3"
+                     BackgroundColor="White">
+            <Image Source="logo.png" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Center"
+                   HeightRequest="80" WidthRequest="80">
+            </Image>
+        </StackLayout>
+        <StackLayout x:Name="loginLayout" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     AbsoluteLayout.LayoutBounds="0, 0.8, 1, 0.7"
+                     BackgroundColor="White" 
+                     Margin="0, 40, 0, 0">
+            <Label Text="Ваш телефон" 
+                   TextColor="#000000" 
+                   FontFamily="Proxima Nova" 
+                   FontSize="15"
+                   Margin="30, 0, 0, 0">
+                
+            </Label>
+            <local:MyEntry x:Name="phone"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="Start"
+                Placeholder="Пароль придет Вам по смс" 
+                PlaceholderColor="#b4b4b4" 
+                TextColor="Black"
+                           MaxLength="11"
+                FontFamily="Proxima Nova" 
+                FontSize="16" 
+                Margin="30, -6, 0, 0" 
+                HeightRequest="40"/>
+            <StackLayout HorizontalOptions="FillAndExpand" 
+                         HeightRequest="1" 
+                         BackgroundColor="#d6d6d6">
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="FillAndExpand" 
+                         HeightRequest="30" 
+                         Margin="0, 10, 0, 0">
+                <Button x:Name="buttonOfUserAgreement"
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Start" 
+                        Margin="30, 0, 0, 0"
+                        BorderWidth="1"
+                        BorderColor="Black"
+                        HeightRequest="40"
+                        WidthRequest="30"
+                        Clicked="AgreeOrDisagree">
+                    
+                </Button>
+                <Label Text="ВЫ СОГЛАШАЕТЕСЬ С НАШИМ ПОЛЬЗОВАТЕЛЬСКИМ СОГЛАШЕНИЕМ" 
+                       TextColor="#787878" 
+                       FontFamily="Proxima Nova" 
+                       FontSize="12" 
+                       Margin="10, 0, 0, 0" 
+                       VerticalOptions="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="GoToUserAgreementPage"/>
+                        </Label.GestureRecognizers>
+                </Label>
+                <Image Source="informationIcon" 
+                       WidthRequest="15" 
+                       HeightRequest="15" 
+                       HorizontalOptions="EndAndExpand" 
+                       VerticalOptions="StartAndExpand" 
+                       Margin="0, 0, 10, 0">
+                    
+                </Image>
+            </StackLayout>
+            <Button x:Name="goBtn" 
+                    Text="Далее"
+                    TextColor="White" 
+                    FontAttributes="None" 
+                    HorizontalOptions="CenterAndExpand" 
+                    FontFamily="Proxima Nova" 
+                    BackgroundColor="#ef5e7a" 
+                    WidthRequest="200" 
+                    HeightRequest="40" 
+                    FontSize="15"
+                    IsEnabled="false"
+                    CornerRadius="20" 
+                    VerticalOptions="Center"
+                    Clicked="OnButtonClicked_nextStageOfRegistration">
+                
+            </Button>
+            <StackLayout HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" 
+                         BackgroundColor="White">
+                <Button Text="У меня уже есть аккаунт" 
+                        TextColor="White" 
+                        BackgroundColor="#b2b2b2" 
+                        WidthRequest="200" 
+                        HeightRequest="40" 
+                        HorizontalOptions="Center" 
+                        FontSize="15"
+                        CornerRadius="20"
+                        Margin="0, 0, 0, 20" 
+                        VerticalOptions="EndAndExpand"
+                        Clicked="OnButtonClicked_Autorization"/>
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

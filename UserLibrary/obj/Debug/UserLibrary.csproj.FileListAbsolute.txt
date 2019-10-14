@@ -1,0 +1,6 @@
+/Users/romandubinskiy/Desktop/MyProject/fhfh/UserLibrary/bin/Debug/UserLibrary.dll
+/Users/romandubinskiy/Desktop/MyProject/fhfh/UserLibrary/bin/Debug/UserLibrary.pdb
+/Users/romandubinskiy/Desktop/MyProject/fhfh/UserLibrary/obj/Debug/UserLibrary.csproj.CoreCompileInputs.cache
+/Users/romandubinskiy/Desktop/MyProject/fhfh/UserLibrary/obj/Debug/UserLibrary.dll
+/Users/romandubinskiy/Desktop/MyProject/fhfh/UserLibrary/obj/Debug/UserLibrary.pdb
+/Users/romandubinskiy/Desktop/MyProject/fhfh/UserLibrary/obj/Debug/UserLibrary.csprojAssemblyReference.cache

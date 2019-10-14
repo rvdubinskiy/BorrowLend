@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.Authorization"
+             xmlns:local="clr-namespace:fhfh"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand" 
+                    BackgroundColor="White">
+        <StackLayout x:Name="logoLayout" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3"
+                     BackgroundColor="White">
+            <Image Source="logo.png" 
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="Center"
+                   HeightRequest="80" 
+                   WidthRequest="80"/>
+        </StackLayout>
+        <StackLayout x:Name="loginLayout" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     AbsoluteLayout.LayoutBounds="0, 0.8, 1, 0.7"
+                     BackgroundColor="White" 
+                     Margin="0, 40, 0, 0">
+            <Label Text="Ваш телефон" 
+                   TextColor="#000000" 
+                   FontFamily="Proxima Nova" 
+                   FontSize="12" 
+                   Margin="30, 0, 0, 0"/>
+            <local:MyEntry x:Name="phoneNumber"
+                    HorizontalOptions="FillAndExpand" 
+                                      VerticalOptions="Start"
+                                      Placeholder="На который у Вас зарегестрирован аккаунт" 
+                                      PlaceholderColor="#b4b4b4" TextColor="Black"
+                                      FontFamily="Proxima Nova" 
+                                      FontSize="16" 
+                                      Margin="30, -6, 0, 0" 
+                                      HeightRequest="40"/>
+            <StackLayout HorizontalOptions="FillAndExpand" 
+                         HeightRequest="1" 
+                         BackgroundColor="#d6d6d6"/>
+            <Label Text="Ваш пароль" 
+                   TextColor="#000000" 
+                   FontFamily="Proxima Nova" 
+                   FontSize="12" 
+                   Margin="30, 5, 0, 0"/>
+            <local:MyEntry x:Name="password"
+                    IsPassword="True" 
+                                      HorizontalOptions="FillAndExpand" 
+                                      VerticalOptions="Start"
+                                      Placeholder="•••••••••" 
+                                      PlaceholderColor="#b4b4b4" 
+                                      TextColor="Black"
+                                      FontFamily="Proxima Nova" 
+                                      FontSize="16" 
+                                      Margin="30, -6, 0, 0" 
+                                      HeightRequest="40"/>
+            <StackLayout HorizontalOptions="FillAndExpand" 
+                         HeightRequest="1" 
+                         BackgroundColor="#d6d6d6"/>
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="FillAndExpand" 
+                         HeightRequest="30" 
+                         Margin="0, 10, 0, 0">
+                <Button VerticalOptions="Center" 
+                        HorizontalOptions="Start" 
+                        Margin="30, 0, 0, 0" 
+                        BorderRadius="13" 
+                        HeightRequest="26"
+                        WidthRequest="26"/>
+                <Label Text="ЗАПОМНИТЬ МЕНЯ" 
+                       TextColor="#787878" 
+                       FontFamily="Proxima Nova" 
+                       FontSize="12" 
+                       Margin="10, 0, 0, 0" 
+                       VerticalOptions="Center">
+                </Label>
+                   <ActivityIndicator Color="Black" x:Name="loader" 
+                                     IsRunning="false"
+                                     IsVisible="false"
+                                    IsEnabled="true"
+                                    VerticalOptions="Center" HorizontalOptions="Center" />
+            </StackLayout>
+            <Button x:Name="goBtn" 
+                    Text="ДАЛЕЕ" 
+                    TextColor="White" 
+                    FontAttributes="None" 
+                    HorizontalOptions="CenterAndExpand" 
+                    FontFamily="Proxima Nova" 
+                    BackgroundColor="#ef5e7a" 
+                    WidthRequest="200" 
+                    HeightRequest="40" 
+                    FontSize="12"
+                    CornerRadius="20" 
+                    VerticalOptions="Center"
+                    Clicked="OnButtonClicked_Presentation"/>
+            <StackLayout HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" 
+                         BackgroundColor="White">
+                <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="FillAndExpand" 
+                             HeightRequest="50" 
+                             BackgroundColor="White" 
+                             Margin="80, 20, 80, 0">
+                    <Image Source="vk3.png" 
+                           HorizontalOptions="CenterAndExpand" 
+                           HeightRequest="30" 
+                           WidthRequest="30"/>
+                    <Image Source="instagramLogo.png" 
+                           HorizontalOptions="CenterAndExpand"
+                           HeightRequest="30" 
+                           WidthRequest="30"/>
+                    <Image Source="facebookLogo.png" 
+                           HorizontalOptions="CenterAndExpand" 
+                           HeightRequest="30" 
+                           WidthRequest="30"/>
+                    <Image Source="odnoclassnikiLogo.png" 
+                           HorizontalOptions="CenterAndExpand" 
+                           HeightRequest="30" 
+                           WidthRequest="30"/>
+                </StackLayout>
+                <Label Text="Авторизация через социальные сети в 1 клик" 
+                       FontFamily="Proxima Nova" 
+                       FontSize="12"
+                       TextColor="#a5a5a5" 
+                       HorizontalOptions="Center"/>
+                <Button Text="Восстановить пароль" 
+                        TextColor="White" 
+                        BackgroundColor="#b2b2b2" 
+                        WidthRequest="200" 
+                        HeightRequest="40" 
+                        HorizontalOptions="Center" 
+                        FontSize="12" 
+                        CornerRadius="20"
+                        Margin="0, 0, 0, 20"  
+                        VerticalOptions="EndAndExpand"
+                        Clicked="OnButtonClicked_NewAcc"/>
+            </StackLayout>
+                
+        </StackLayout>
+            <StackLayout x:Name="opacityStack"
+                         IsVisible="false"
+                         IsEnabled="false"
+                         AbsoluteLayout.LayoutFlags="All" 
+                         AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="Silver"
+                         Opacity="0.3"/>
+            <ActivityIndicator x:Name="activityIndicator"
+                               AbsoluteLayout.LayoutFlags="All" 
+                               AbsoluteLayout.LayoutBounds="0.5, 0.5, 0.1, 0.05"
+                               HeightRequest="70"
+                               WidthRequest="70"
+                               IsRunning="false"
+                               IsEnabled="false"
+                               Color="Black"/>
+    </AbsoluteLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

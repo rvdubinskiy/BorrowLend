@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.Settings"
+             xmlns:local="clr-namespace:fhfh"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Title="Настройки"
+             ios:Page.LargeTitleDisplay="Never"
+             ios:Page.UseSafeArea="true">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Выйти" Clicked="Handle_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid RowSpacing="-1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+                <!--<RowDefinition Height="70"/>-->
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid RowSpacing="-11">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="FillAndExpand"
+                                     HorizontalOptions="FillAndExpand">
+                            <Label Text="Push-уведомления"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="StartAndExpand"
+                                   TextColor="Gray"
+                                   Font="14"
+                                   Margin="25"/>
+                            <Switch HorizontalOptions="EndAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    Margin="0,0,20,0"
+                                    OnColor="#ff6699"/>
+                        </StackLayout>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <StackLayout Orientation="Horizontal"
+                                     VerticalOptions="FillAndExpand"
+                                     HorizontalOptions="FillAndExpand">
+                            <Label Text="Геолокация"
+                                   TextColor="Gray"
+                                   VerticalOptions="CenterAndExpand"
+                                   HorizontalOptions="StartAndExpand"
+                                   Margin="25"
+                                   Font="14"/>
+                            <Switch HorizontalOptions="EndAndExpand"
+                                    VerticalOptions="CenterAndExpand"
+                                    Margin="0,0,20,0"
+                                    OnColor="#ff6699"/>
+                        </StackLayout>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid RowSpacing="-1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="70"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <Button Image="vk3.png"
+                                        Padding="-5"/>
+                            </Grid>
+                            
+                            <Grid Grid.Column="2">
+                                <Button Image="instagramLogo.png"/>
+                            </Grid>
+                            
+                            <Grid Grid.Column="3">
+                                <Button Image="facebookLogo.png"/>
+                            </Grid>
+                            
+                            <Grid Grid.Column="4">
+                                <Button Image="odnoclassnikiLogo.png"/>
+                            </Grid>
+                        </Grid>
+                       
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Label Text="Авторизация через социальные сети"
+                               TextColor="Gray"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="Center"
+                               Font="14"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="2"
+                  BackgroundColor="White">
+                <ScrollView Orientation="Vertical"
+                            VerticalScrollBarVisibility="Never"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="FillAndExpand"
+                                 HorizontalOptions="FillAndExpand"
+                                 Spacing="-1">
+                        <Frame HasShadow="false"
+                               CornerRadius="0">
+                            <StackLayout Orientation="Vertical"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand"
+                                         >
+                                <Label Text="Ваш номер телефона"
+                                       Font="12"/>
+                                <local:MyEntry x:Name="phoneEntry"
+                                        MaxLength="24"
+                                       Keyboard="Telephone"
+                                       Placeholder="+7(***)-***-**-**"/>
+                                <BoxView HeightRequest="1"
+                                         WidthRequest="1"
+                                         BackgroundColor="#e9e9e9"/>
+                            </StackLayout>
+                        </Frame>
+                        
+                        <Frame HasShadow="false"
+                               CornerRadius="0"
+                               >
+                            <StackLayout Orientation="Vertical"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="Ваш E-mail"
+                                       Font="12"/>
+                                <local:MyEntry  x:Name="emailEntry"
+                                                Placeholder="sdsd@mail.ru"
+                                               Keyboard="Email"/>
+                                <BoxView HeightRequest="1"
+                                         WidthRequest="1"
+                                         BackgroundColor="#e9e9e9"/>
+                            </StackLayout>
+                        </Frame>
+                        
+                        <Frame HasShadow="false"
+                               CornerRadius="0">
+                            <StackLayout Orientation="Vertical"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="Новый пароль"
+                                       Font="12"/>
+                                <local:MyEntry x:Name="firstPassword"
+                                            Placeholder="******"
+                                               IsPassword="true"/>
+                                <BoxView HeightRequest="1"
+                                         WidthRequest="1"
+                                         BackgroundColor="#e9e9e9"/>
+                            </StackLayout>
+                        </Frame>
+                        
+                        <Frame HasShadow="false"
+                               CornerRadius="0">
+                            <StackLayout Orientation="Vertical"
+                                         VerticalOptions="FillAndExpand"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="Новый пароль еще раз"
+                                       Font="12"/>
+                                <local:MyEntry x:Name="secondPassword"
+                                                Placeholder="******"
+                                               IsPassword="true"/>
+                                <BoxView HeightRequest="1"
+                                         WidthRequest="1"
+                                         BackgroundColor="#e9e9e9"/>
+                            </StackLayout>
+                        </Frame>
+                        
+                        <Button Text="Сохранить"
+                        TextColor="White"
+                        BackgroundColor="#ef5e7a"
+                        CornerRadius="20"
+                        VerticalOptions="Center"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="BackButton_Click"/>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            <!--<Grid Grid.Row="3">
+                <Button Text="Сохранить"
+                        TextColor="White"
+                        BackgroundColor="#ef5e7a"
+                        CornerRadius="20"
+                        VerticalOptions="Center"
+                        WidthRequest="200"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="BackButton_Click"/>
+            </Grid>-->
+           
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

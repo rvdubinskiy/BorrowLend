@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" 
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+              x:Class="fhfh.Presentation"
+              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+              ios:Page.UseSafeArea="true"
+              >
+    <ContentPage>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                    <Button Image="cross"
+                            Margin="0,0,10,0"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="EndAndExpand"
+                            Clicked="OnButtonClicked_ClosePres"/> 
+            </Grid>
+<!--            -->
+            <Grid Grid.Row="2">
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             Padding="30">
+                    <Image Source="press3"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Grid>
+<!--            -->
+            <Grid Grid.Row="3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Text="BorrowLend"
+                               VerticalOptions="StartAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               Font="20"
+                               FontAttributes="Bold"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="60"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <StackLayout>
+                                    <Label Text="Удобное приложения для поиска товаров в аренду"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
+                                           XAlign="Center"/>
+                                </StackLayout>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+<!--                    -->
+                    <Grid Grid.Row="3">
+                        <Grid ColumnSpacing="-5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <Image Source="p1"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                                
+                            </Grid>
+                            <Grid Grid.Column="2">
+                                <Image Source="p2"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                            <Grid Grid.Column="3">
+                                <Image Source="p2"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                            <Grid Grid.Column="4">
+                                <Image Source="p2"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage>
+    
+    
+    
+    
+    
+    
+    <ContentPage>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                    <Button Image="cross"
+                            Margin="0, 0, 10, 0"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="EndAndExpand"
+                        Clicked="OnButtonClicked_ClosePres"/> 
+            </Grid>
+<!--            -->
+            <Grid Grid.Row="2">
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             Padding="30">
+                    <Image Source="pres2"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Grid>
+<!--            -->
+            <Grid Grid.Row="3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Text="Диалоги"
+                               VerticalOptions="StartAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               Font="20"
+                               FontAttributes="Bold"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="60"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <StackLayout>
+                                    <Label Text="Вы можете договариваться с продавцом прямо в нашем приложении"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
+                                           XAlign="Center"/>
+                                    <!--<Label Text="продавцом прямо в нашем"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="приложении"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>-->
+                                    <!--<Label Text="кнопка о начале сделки"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>-->
+                                </StackLayout>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+<!--                    -->
+                    <Grid Grid.Row="3">
+                        <Grid ColumnSpacing="-5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <Image Source="p2"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                                
+                            </Grid>
+                            <Grid Grid.Column="2">
+                                <Image Source="p1"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                            <Grid Grid.Column="3">
+                                <Image Source="p2"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                            <Grid Grid.Column="4">
+                                <Image Source="p2"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage>
+    
+    
+    
+    
+    
+    
+    <ContentPage>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1"> 
+                    <Button Image="cross"
+                            Margin="0, 0, 10, 0"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="EndAndExpand"
+                        Clicked="OnButtonClicked_ClosePres"/> 
+            </Grid>
+<!--            -->
+            <Grid Grid.Row="2">
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"
+                             Padding="30">
+                    <Image Source="pres1"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Grid>
+<!--            -->
+            <Grid Grid.Row="3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Text="Безопасность"
+                               VerticalOptions="StartAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               Font="20"
+                               FontAttributes="Bold"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="60"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <StackLayout>
+                                    <Label Text="Мы рекомендуем ввести свои личные данные для увеличения безопасности и гарантии сделок"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
+                                           XAlign="Center"/>
+                                    <!--<Label Text="личные данные для увеличения"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="безопасности и гарантии сделок"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>-->
+                                    <!--<Label Text="кнопка о начале сделки"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>-->
+                                </StackLayout>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+<!--                    -->
+                    <Grid Grid.Row="3">
+                        <Grid ColumnSpacing="-5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <Image Source="p2"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                                
+                            </Grid>
+                            <Grid Grid.Column="2">
+                                <Image Source="p2"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                            <Grid Grid.Column="3">
+                                <Image Source="p1"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                            <Grid Grid.Column="4">
+                                <Image Source="p2"
+                                       WidthRequest="30"
+                                       HeightRequest="30"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage>
+    
+    
+    
+    
+    
+    
+    <ContentPage>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                
+            </Grid>
+<!--            -->
+            <Grid Grid.Row="1">
+                <StackLayout Orientation="Horizontal"
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand">
+                    <Image Source="present"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Grid>
+<!--            -->
+            <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Text="Аренда"
+                               VerticalOptions="StartAndExpand"
+                               HorizontalOptions="CenterAndExpand"
+                               Font="20"
+                               FontAttributes="Bold"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="60"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <StackLayout >
+                                    <Label Text="В разделе Детали сделки находится информация о Вашем запросе на товар, а также кнопка о начале сделки"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"
+                                           XAlign="Center"/>
+                                    <!--<Label Text="находится информация о Вашем"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="запросе на товар, а также"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>
+                                    <Label Text="кнопка о начале сделки"
+                                           TextColor="Gray"
+                                           VerticalOptions="Center"
+                                           HorizontalOptions="Center"/>-->
+                                </StackLayout>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+<!--                    -->
+                    <Grid Grid.Row="3">
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="70"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <Button Text="Продолжить"
+                                        BackgroundColor="#ef5e7a"
+                                        TextColor="White"
+                                        VerticalOptions="CenterAndExpand"
+                                        HorizontalOptions="FillAndExpand"
+                                        CornerRadius="20"
+                                        Clicked="OnButtonClicked_ClosePres"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </ContentPage>
+   
+</CarouselPage>

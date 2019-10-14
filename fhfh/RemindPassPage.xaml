@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.RemindPassPage"
+             xmlns:local="clr-namespace:fhfh">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand" 
+                        BackgroundColor="White">
+        <StackLayout x:Name="logoLayout" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     AbsoluteLayout.LayoutBounds="0, 0, 1, 0.3"
+                     BackgroundColor="White">
+            <Image Source="logo.png" 
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
+                   HeightRequest="80" 
+                   WidthRequest="80"></Image>
+        </StackLayout>
+        <StackLayout x:Name="loginLayout" 
+                     AbsoluteLayout.LayoutFlags="All" 
+                     AbsoluteLayout.LayoutBounds="0, 0.8, 1, 0.7"
+                     BackgroundColor="White" 
+                     Margin="0, 40, 0, 0">
+            <Label Text="Ваш телефон" 
+                   TextColor="#000000" 
+                   FontFamily="Proxima Nova" 
+                   FontSize="12"
+                   Margin="30, 0, 0, 0"></Label>
+            <local:MyEntry HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="Start"
+                           Placeholder="На который у Вас зарегестрирован аккаунт" 
+                           PlaceholderColor="#b4b4b4" TextColor="Black"
+                           FontFamily="Proxima Nova" 
+                           FontSize="16" 
+                           Margin="30, -6, 0, 0" 
+                           HeightRequest="40"/>
+            <StackLayout HorizontalOptions="FillAndExpand" 
+                         HeightRequest="1" 
+                         BackgroundColor="#d6d6d6"></StackLayout>
+            <Button x:Name="goBtn" 
+                    Text="ДАЛЕЕ" 
+                    TextColor="White" 
+                    FontAttributes="None" 
+                    HorizontalOptions="CenterAndExpand" 
+                    FontFamily="Proxima Nova" 
+                    BackgroundColor="#ef5e7a" 
+                    WidthRequest="200" 
+                    HeightRequest="40" 
+                    FontSize="12"
+                    CornerRadius="20" 
+                    VerticalOptions="Center"
+                    ></Button>
+            <StackLayout HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" 
+                         BackgroundColor="White">
+                <Button Text="Создать новый аккаунт" 
+                        TextColor="White" 
+                        BackgroundColor="#b2b2b2"
+                        WidthRequest="200" 
+                        HeightRequest="40" 
+                        HorizontalOptions="Center" 
+                        FontSize="12" 
+                        CornerRadius="20"
+                        Margin="0, 0, 0, 20" 
+                        VerticalOptions="EndAndExpand" 
+                        Clicked="OnButtonClicked_NewAcc"/>
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

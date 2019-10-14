@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="fhfh.CreateGoodsPage"
+             xmlns:local="clr-namespace:fhfh">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BoxViewLineStyle" TargetType="BoxView">
+                <Setter Property="HeightRequest"
+                        Value="1"/>
+                <Setter Property="WidthRequest"
+                        Value="1"/>
+                <Setter Property="BackgroundColor"
+                        Value="#e9e9e9"/>
+            </Style>
+            <Style x:Key="ButtonAddSaveStyle" TargetType="Button">
+                <Setter Property="TextColor"
+                        Value="White"/>
+                <Setter Property="CornerRadius"
+                        Value="20"/>
+                <Setter Property="Font"
+                        Value="17"/>
+                <Setter Property="BackgroundColor"
+                        Value="#ef5e7a"/>
+                <Setter Property="VerticalOptions"
+                        Value="Center"/>
+                <Setter Property="HorizontalOptions"
+                        Value="FillAndExpand"/>
+            </Style>
+            <Style x:Key="LableStyle" TargetType="Label">
+                <Setter Property="Font"
+                        Value="15"/>
+                <Setter Property="VerticalOptions"
+                        Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="15">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Grid Grid.Row="0">
+                        <ScrollView Orientation="Horizontal"
+                                    HorizontalScrollBarVisibility="Never">
+                            <StackLayout Orientation="Horizontal"
+                                         HorizontalOptions="FillAndExpand"
+                                         VerticalOptions="FillAndExpand"
+                                         x:Name="stack">
+                            </StackLayout>
+                        </ScrollView>
+                    </Grid>
+                    
+                    
+                    
+                    <Grid Grid.Row="1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="40"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="1">
+                                <Button Text="Добавить фото"
+                                        x:Name="takePhoto"
+                                        Style="{StaticResource ButtonAddSaveStyle}"
+                                        Clicked="TakeAPhoto"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    
+                    
+                    
+                    <Grid Grid.Row="2"
+                          RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="70"/>
+                        </Grid.RowDefinitions>
+                        
+                        <Grid Grid.Row="0">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid Grid.Row="0">
+                                    <Label Text="Название товара"
+                                           Style="{StaticResource LableStyle}"/>
+                                </Grid>
+                                
+                                <Grid Grid.Row="1">
+                                    <StackLayout>
+                                        <local:MyEntry x:Name="nameOfGood"
+                                                       MaxLength="40"
+                                            Placeholder="Введите название Вашего товара"
+                                                   PlaceholderColor="Silver"/>
+                                        <BoxView Style="{StaticResource BoxViewLineStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        <Grid Grid.Row="1">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid Grid.Row="0">
+                                    <Label Text="Описание товара"
+                                           Style="{StaticResource LableStyle}"/>
+                                </Grid>
+                                
+                                <Grid Grid.Row="1">
+                                    <StackLayout>
+                                        <Editor x:Name="discriptionOfGood"
+                                                Placeholder="Например, выбор наличного или безналичного расчета(по умолчанию выбран безналичный)"
+                                                PlaceholderColor="Silver"
+                                                AutoSize="TextChanges"
+                                                HeightRequest="30"
+                                                MaxLength="500"/>
+                                        <BoxView Style="{StaticResource BoxViewLineStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        <Grid Grid.Row="2">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid Grid.Row="0">
+                                    <Label Text="Стоимость аренды"
+                                           Style="{StaticResource LableStyle}"/>
+                                </Grid>
+                                
+                                <Grid Grid.Row="1">
+                                    <StackLayout>
+                                        <local:MyEntry x:Name="priceOfGood"
+                                                       Placeholder="Введите желаемую для Вас стоимость"
+                                                       PlaceholderColor="Silver"
+                                                       Keyboard="Telephone"/>
+                                        <BoxView Style="{StaticResource BoxViewLineStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        
+                        <Grid Grid.Row="3">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid Grid.Row="0">
+                                    <Label Text="Желаемый залог"
+                                           Style="{StaticResource LableStyle}"/>
+                                </Grid>
+                                
+                                <Grid Grid.Row="1">
+                                    <StackLayout>
+                                        <local:MyEntry x:Name="pledge"
+                                                       Placeholder="Введите желаемый залог"
+                                                       PlaceholderColor="Silver"
+                                                       Keyboard="Telephone"/>
+                                        <BoxView Style="{StaticResource BoxViewLineStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        <Grid Grid.Row="4">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid Grid.Row="0">
+                                    <Label Text="Срок аренды"
+                                           Style="{StaticResource LableStyle}"/>
+                                </Grid>
+                                
+                                <Grid Grid.Row="1">
+                                    <StackLayout>
+                                        <local:MyPicker
+                                            x:Name="time"
+                                            Title="В день">
+                                            <Picker.Items>
+                                                <x:String>В минуту</x:String>
+                                                <x:String>В 30 минут</x:String>
+                                                <x:String>В час</x:String>
+                                                <x:String>В день</x:String>
+                                                <x:String>В неделю</x:String>
+                                                <x:String>В месяц</x:String>
+                                            </Picker.Items>
+                                        </local:MyPicker>
+                                        <BoxView Style="{StaticResource BoxViewLineStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        <Grid Grid.Row="5">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid Grid.Row="0">
+                                    <Label Text="Оплата"
+                                           Style="{StaticResource LableStyle}"/>
+                                </Grid>
+                                
+                                <Grid Grid.Row="1">
+                                    <StackLayout>
+                                        <local:MyPicker x:Name="cost"
+                                            Title="Наличный расчет">
+                                            <Picker.Items>
+                                                <x:String>Безналичный расчет</x:String>
+                                                <x:String>Наличный расчет</x:String>
+                                            </Picker.Items>
+                                        </local:MyPicker>
+                                        <BoxView Style="{StaticResource BoxViewLineStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        <Grid Grid.Row="6">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid Grid.Row="0">
+                                    <Label Text="Рубрика"
+                                           Style="{StaticResource LableStyle}"/>
+                                </Grid>
+                                
+                                <Grid Grid.Row="1">
+                                    <StackLayout>
+                                        <local:MyPicker x:Name="theme"
+                                            Title="Инструменты">
+                                            <Picker.Items>
+                                                <x:String>Электроника</x:String>
+                                                <x:String>Инструменты</x:String>
+                                                <x:String>Автомобили</x:String>
+                                                <x:String>Телефоны и планшеты</x:String>
+                                                <x:String>Огород</x:String>
+                                                <x:String>Косметика</x:String>
+                                                <x:String>Книги</x:String>
+                                            </Picker.Items>
+                                        </local:MyPicker>
+                                        <BoxView Style="{StaticResource BoxViewLineStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        <Grid Grid.Row="7">
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid Grid.Row="0">
+                                    <Label Text="Местоположения"
+                                           Style="{StaticResource LableStyle}"/>
+                                </Grid>
+                                
+                                <Grid Grid.Row="1">
+                                    <StackLayout>
+                                        <local:MyEntry Placeholder="Москва, ул.Лазарева, д.6"/>
+                                        <BoxView Style="{StaticResource BoxViewLineStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                        
+                        
+                        
+                        <Grid Grid.Row="8">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                
+                                <Grid Grid.Row="0">
+                                    <Label Text="Верификация"
+                                           Style="{StaticResource LableStyle}"/>
+                                </Grid>
+                                
+                                <Grid Grid.Row="1">
+                                    <StackLayout>
+                                        <local:MyPicker >
+                                        </local:MyPicker>
+                                        <BoxView Style="{StaticResource BoxViewLineStyle}"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    
+                    
+                    
+                    
+                    <Grid Grid.Row="4">
+                        <Button Text="Создать / Сохранить"
+                                Style="{StaticResource ButtonAddSaveStyle}"
+                                Clicked="Save"/>
+                    </Grid>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
